@@ -10,7 +10,7 @@ import Settings from './components/Settings';
 /**
  * PUBLIC_INTERFACE
  * MainContainer is the primary layout wrapper for PetCareHub.
- * It features a responsive, modern sidebar and a beautiful dashboard with engaging widgets and graphic placeholders.
+ * Now features a modern, top-positioned, glassy navbar and a responsive dashboard.
  */
 function MainContainer() {
   // Track selected navigation tab
@@ -18,7 +18,7 @@ function MainContainer() {
 
   // PETS and MEDICAL STATEFUL DATA
   const [pets, setPets] = useState([]); // [{id, name, age, breed, ...}]
-  // Track the currently "selected" pet by id (for Medical section) - we'll default to first pet if available
+  // Track the currently "selected" pet by id (for Medical section)
   const [selectedPetId, setSelectedPetId] = useState(null);
 
   // Dictionary of petId to their medical records (scoped per pet)
@@ -246,19 +246,21 @@ function MainContainer() {
     }
   }
 
+  // --- RENDER ---
   return (
-    <div className="pch-main-layout">
-      <aside className="pch-sidebar" aria-label="Sidebar Navigation">
-        <div className="pch-sidebar-logo">
+    <div className="pch-main-layout top-navbar">
+      {/* Top Navbar */}
+      <nav className="pch-top-navbar" aria-label="Main Navigation">
+        <div className="pch-navbar-logo">
           <span role="img" aria-label="paw" className="pch-logo-icon">🐾</span>
           <span className="pch-logo-title">PetCareHub</span>
         </div>
-        <nav className="pch-nav">
+        <div className="pch-navbar-navlinks">
           {navSections.map(nav => (
             <a
               key={nav.key}
               href="#"
-              className={`pch-nav-link${active === nav.key ? ' active' : ''}`}
+              className={`pch-navbar-link${active === nav.key ? ' active' : ''}`}
               onClick={e => { e.preventDefault(); setActive(nav.key); }}
               tabIndex={0}
               aria-current={active === nav.key ? 'page' : undefined}
@@ -267,12 +269,12 @@ function MainContainer() {
               {nav.label}
             </a>
           ))}
-        </nav>
-        <footer className="pch-sidebar-footer">
+        </div>
+        <div className="pch-navbar-footer">
           <span>© FurEverCare</span>
-        </footer>
-      </aside>
-      <main className="pch-main-content">
+        </div>
+      </nav>
+      <main className="pch-main-content with-navbar">
         <header className="pch-main-header">
           <h1>
             Welcome to PetCareHub
@@ -344,7 +346,7 @@ function MainContainer() {
               </div>
               {/* Medical/Health summary */}
               <div className="pch-summary-highlight pch-summary-health" tabIndex={0}>
-                <span className="pch-summary-graphic" role="img" aria-label="health">🩺</span>
+                <span className="pch-summary-graphic" role="img" aria-label="health">🧺</span>
                 <div>
                   <span className="pch-summary-title">Health Tasks</span>
                   <div className="pch-summary-main-value">
