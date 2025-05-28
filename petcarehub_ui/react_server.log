@@ -63,3 +63,31 @@ src/MainContainer.js
 Search for the keywords to learn more about each error.
 
 webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/MainContainer.js
+  Line 86:22:  'reminders' is not defined                 no-undef
+  Line 90:18:  'handleAddReminder' is not defined         no-undef
+  Line 91:19:  'handleEditReminder' is not defined        no-undef
+  Line 92:21:  'handleDeleteReminder' is not defined      no-undef
+  Line 93:25:  'handleToggleDoneReminder' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/MainContainer.js
+  Line 1:27:    'useCallback' is defined but never used                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  Line 125:13:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+
+ERROR in [eslint] 
+src/MainContainer.js
+  Line 86:22:  'reminders' is not defined                 no-undef
+  Line 90:18:  'handleAddReminder' is not defined         no-undef
+  Line 91:19:  'handleEditReminder' is not defined        no-undef
+  Line 92:21:  'handleDeleteReminder' is not defined      no-undef
+  Line 93:25:  'handleToggleDoneReminder' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
