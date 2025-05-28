@@ -64,29 +64,29 @@ function Navigation() {
   // Close dropdowns on route change
   React.useEffect(() => setActiveDropdown(null), [location]);
 
-  return (
-    <nav className="pch-navbar sticky" aria-label="Site main navigation">
-      <div className="pch-navbar-container">
-        <NavLink to="/" className="pch-navbar-logo" aria-label="PetCareHub Home">
-          <span role="img" aria-label="paw" className="pch-logo-icon">🐾</span>
-          <span className="pch-logo-title">PetCareHub</span>
-        </NavLink>
-        <ul className="pch-navbar-links">
-          {navConfig.map(nav =>
-            nav.dropdown ? (
-              <li
-                className={`pch-navbar-dropdown${activeDropdown === nav.label ? ' open' : ''}`}
-                key={nav.label}
-                onMouseEnter={() => setActiveDropdown(nav.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <span className="pch-navbar-link" tabIndex={0} aria-haspopup="true">
-                  <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>
-                  {nav.label}
-                  <span className="pch-dropdown-arrow">▼</span>
-                </span>
-                <ul className="pch-dropdown-menu">
-                  {nav.dropdown.map(sub =>
+  // Support rendering of up to 2-level nested dropdowns
+  function renderNavItem(nav, level = 0) {
+    // If there is a dropdown (children)
+    if (nav.dropdown) {
+      const isActive = activeDropdown === nav.label;
+      return (
+        <li
+          className={`pch-navbar-dropdown${isActive ? ' open' : ''} pch-navbar-dropdown-level${level}`}
+          key={nav.label}
+          onMouseEnter={() => setActiveDropdown(nav.label)}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <span className="pch-navbar-link" tabIndex={0} aria-haspopup="true">
+            {nav.icon && <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>}
+            {nav.label}
+            <span className="pch-dropdown-arrow">▼</span>
+          </span>
+          <ul className="pch-dropdown-menu pch-dropdown-menu-nest">
+            {
+              nav.dropdown.map((sub) =>
+                sub.dropdown
+                  ? renderNavItem(sub, level + 1)
+                  : (
                     <li key={sub.to}>
                       <NavLink
                         className={({ isActive }) =>
@@ -98,24 +98,41 @@ function Navigation() {
                         {sub.label}
                       </NavLink>
                     </li>
-                  )}
-                </ul>
-              </li>
-            ) : (
-              <li key={nav.to}>
-                <NavLink
-                  to={nav.to}
-                  className={({ isActive }) =>
-                    "pch-navbar-link" + (isActive ? " active" : "")
-                  }
-                  aria-current={location.pathname === nav.to ? "page" : undefined}
-                >
-                  <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>
-                  {nav.label}
-                </NavLink>
-              </li>
-            )
-          )}
+                  )
+              )
+            }
+          </ul>
+        </li>
+      );
+    } else {
+      return (
+        <li key={nav.to}>
+          <NavLink
+            to={nav.to}
+            className={({ isActive }) =>
+              "pch-navbar-link" + (isActive ? " active" : "")
+            }
+            aria-current={location.pathname === nav.to ? "page" : undefined}
+          >
+            {nav.icon && (
+              <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>
+            )}
+            {nav.label}
+          </NavLink>
+        </li>
+      );
+    }
+  }
+
+  return (
+    <nav className="pch-navbar sticky" aria-label="Site main navigation">
+      <div className="pch-navbar-container">
+        <NavLink to="/" className="pch-navbar-logo" aria-label="PetCareHub Home">
+          <span role="img" aria-label="paw" className="pch-logo-icon">🐾</span>
+          <span className="pch-logo-title">PetCareHub</span>
+        </NavLink>
+        <ul className="pch-navbar-links">
+          {navConfig.map(nav => renderNavItem(nav, 0))}
         </ul>
       </div>
     </nav>
