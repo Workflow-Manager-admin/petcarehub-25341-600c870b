@@ -49,25 +49,46 @@
   align-items: center;
   gap: 0.47em;
   padding: 0.62em 1.1em;
-  color: var(--text-color);
+  color: #C0C0C0; /* Silver, always visible by default */
   font-size: 1em;
   border-radius: 7px;
   text-decoration: none;
   font-weight: 500;
   background: none;
   border: none;
-  transition: background 0.16s, color 0.16s;
+  transition: 
+    background 0.16s,
+    color 0.16s,
+    font-weight 0.16s,
+    text-shadow 0.16s;
   cursor: pointer;
   outline: none;
   position: relative;
 }
+[data-theme="dark"] .pch-navbar-link {
+  color: #C0C0C0; /* Silver on dark mode too */
+}
+.pch-navbar-link:visited,
+.pch-navbar-link:link {
+  color: #C0C0C0;
+}
 .pch-navbar-link:hover,
+.pch-navbar-link:focus,
 .pch-navbar-link.active,
 li.pch-navbar-dropdown:hover > .pch-navbar-link,
 li.pch-navbar-dropdown.open > .pch-navbar-link {
   background: var(--kavia-orange);
-  color: #fff;
-  text-shadow: 0 2px 13px #e781417A;
+  color: #fff !important;
+  /* subtle glow effect for better clarity */
+  text-shadow: 0 2px 13px #e78141b5, 0 0 6px #fff9, 0 0 2px #fff6;
+  font-weight: 700;
+  filter: brightness(1.13);
+  outline: none;
+}
+.pch-navbar-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1.5px;
+  box-shadow: 0 0 0 2px var(--kavia-orange), 0 0 4px #fff7;
 }
 .pch-nav-icon {
   font-size: 1.13em;
