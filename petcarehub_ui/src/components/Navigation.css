@@ -220,23 +220,33 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   position: absolute;
   left: 98%;
   top: 4px;
-  min-width: 152px;
-  background: rgba(22,22,22, 0.98);
+  min-width: 155px;
+  background: rgba(22,22,22, 0.985);
   border-radius: 7px;
   box-shadow: 0 2px 18px #2227 0.4;
   z-index: 120;
   margin-top: 0;
-  margin-left: 4px;
+  margin-left: 7px;
   display: none;
   flex-direction: column;
+  border: 1.5px solid #4445;
 }
 .pch-navbar-dropdown-level2.open > .pch-dropdown-menu,
 .pch-navbar-dropdown-level2:hover > .pch-dropdown-menu {
   display: flex;
+  animation: dropdown-fadein .16s;
 }
 
 .pch-navbar-dropdown-level2 > .pch-dropdown-menu li .pch-navbar-link {
-  padding-left: 2.8em;
+  padding-left: 2.5em;
+  border-left: 2.5px solid transparent;
+  margin-left: 0.18em;
+}
+
+.pch-navbar-dropdown-level2 > .pch-dropdown-menu li .pch-navbar-link:hover,
+.pch-navbar-dropdown-level2 > .pch-navbar-link.active {
+  border-left: 2.5px solid var(--kavia-orange);
+  background: #272011 !important;
 }
 
 /* Make nested dropdown arrow point right at level1/2+ */
