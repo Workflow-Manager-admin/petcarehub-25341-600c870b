@@ -178,16 +178,40 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   z-index: 110;
   margin-top: 0;
   margin-left: 4px;
+  display: none;
+  flex-direction: column;
+}
+.pch-navbar-dropdown-level1.open > .pch-dropdown-menu,
+.pch-navbar-dropdown-level1:hover > .pch-dropdown-menu {
+  display: flex;
 }
 
 .pch-navbar-dropdown-level1 > .pch-dropdown-menu li .pch-navbar-link {
   padding-left: 2.2em;
 }
 
-/* Slightly indent second-level menus for visual hierarchy */
+/* Second-level dropdown right position for nested sub submenu */
 .pch-navbar-dropdown-level2 > .pch-dropdown-menu {
+  position: absolute;
   left: 98%;
   top: 4px;
+  min-width: 152px;
+  background: rgba(22,22,22, 0.98);
+  border-radius: 7px;
+  box-shadow: 0 2px 18px #2227 0.4;
+  z-index: 120;
+  margin-top: 0;
+  margin-left: 4px;
+  display: none;
+  flex-direction: column;
+}
+.pch-navbar-dropdown-level2.open > .pch-dropdown-menu,
+.pch-navbar-dropdown-level2:hover > .pch-dropdown-menu {
+  display: flex;
+}
+
+.pch-navbar-dropdown-level2 > .pch-dropdown-menu li .pch-navbar-link {
+  padding-left: 2.8em;
 }
 
 /* Make nested dropdown arrow point right at level1/2+ */
@@ -195,6 +219,12 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
 .pch-navbar-dropdown-level2 > .pch-navbar-link > .pch-dropdown-arrow {
   transform: rotate(-90deg);
   margin-left: 0.38em;
+}
+
+/* Ensure arrow points down only for main/top items */
+.pch-navbar-dropdown-level0 > .pch-navbar-link > .pch-dropdown-arrow {
+  transform: none;
+  margin-left: 0.23em;
 }
 
 /* On mobile, adjust dropdown display for nested structure */
