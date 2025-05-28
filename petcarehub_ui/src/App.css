@@ -30,18 +30,34 @@
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -232,18 +248,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -430,18 +462,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -636,18 +684,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -836,18 +900,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -1032,18 +1112,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -1232,18 +1328,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -1434,18 +1546,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -1632,18 +1760,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -1831,18 +1975,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -2031,18 +2191,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -2235,18 +2411,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -2431,18 +2623,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
@@ -2628,18 +2836,34 @@ body {
 }
 
 .pch-sidebar {
-  width: 240px;
-  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  width: 250px;
+  background: linear-gradient(125deg, var(--pch-primary) 86%, var(--pch-accent) 99%);
   color: var(--pch-sidebar-text);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  box-shadow: 2px 0 16px 0 rgba(107,120,102,0.09), 4px 0 20px 0 rgba(135,157,133,0.06);
   position: relative;
   z-index: 10;
-  padding: 0 0 16px 0;
+  padding: 0 0 18px 0;
   min-height: 100vh;
+  backdrop-filter: blur(1.5px) saturate(120%);
+  border-right: 1.5px solid var(--pch-secondary);
+  /* Custom Scrollbar for Sidebar */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pch-secondary) var(--pch-primary);
+}
+.pch-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+.pch-sidebar::-webkit-scrollbar-thumb {
+  background: var(--pch-secondary);
+  border-radius: 6px;
+}
+.pch-sidebar::-webkit-scrollbar-track {
+  background: var(--pch-primary);
 }
 
 .pch-sidebar-logo {
