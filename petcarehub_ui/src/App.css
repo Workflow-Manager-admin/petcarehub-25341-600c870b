@@ -17,6 +17,185 @@
   --pch-shadow: 0 4px 18px 2px rgba(80,110,78,0.07);
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 
 body {
   margin: 0;
@@ -27,10 +206,368 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
 
 .navbar {
@@ -47,6 +584,185 @@ body {
   z-index: 100;
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 .logo {
   font-size: 1.25rem;
   font-weight: 600;
@@ -55,8 +771,366 @@ body {
   gap: 8px;
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 .logo-symbol {
   color: var(--kavia-orange);
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
 
 .container {
@@ -65,6 +1139,185 @@ body {
   padding: 0 24px;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
 
 .hero {
@@ -77,10 +1330,368 @@ body {
   gap: 24px;
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 .subtitle {
   color: var(--kavia-orange);
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
 
 .title {
@@ -90,12 +1701,370 @@ body {
   margin: 0;
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 .description {
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--text-secondary);
   max-width: 600px;
   margin-bottom: 16px;
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
 
 .btn {
@@ -110,11 +2079,548 @@ body {
   transition: background-color 0.2s ease;
 }
 
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
+}
+
 .btn:hover {
   background-color: #FF8B4D;
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
 
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
+}
+
+/* ----- PetCareHub MAIN LAYOUT ------ */
+.pch-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--pch-main-bg);
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.pch-sidebar {
+  width: 240px;
+  background: linear-gradient(135deg, var(--pch-primary) 92%, var(--pch-accent) 100%);
+  color: var(--pch-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(85,109,61,0.06);
+  position: relative;
+  z-index: 10;
+  padding: 0 0 16px 0;
+  min-height: 100vh;
+}
+
+.pch-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  padding: 28px 24px 22px 28px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.12);
+  background: transparent;
+}
+.pch-logo-title {
+  font-size: 1.2em;
+}
+
+.pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2.2em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  margin-right: 8px;
+  border: 2px solid rgba(89,119,89,0.18);
+}
+
+.pch-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.pch-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 30px;
+  color: var(--pch-sidebar-text);
+  opacity: 0.9;
+  font-size: 1.06rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  border-radius: 0 24px 24px 0;
+  transition: 
+    background 0.25s, 
+    color 0.18s, 
+    border-color 0.19s, 
+    box-shadow 0.21s;
+  cursor: pointer;
+}
+
+.pch-nav-link.active,
+.pch-nav-link:hover {
+  background: var(--pch-sidebar-active);
+  color: var(--pch-accent);
+  border-left: 5px solid var(--pch-accent);
+  font-weight: bold;
+  box-shadow: 0 2px 10px 0 rgba(129,158,117,0.05);
+  opacity: 1;
+}
+
+.pch-nav-icon {
+  font-size: 1.15em;
+}
+
+/* Sidebar Footer */
+.pch-sidebar-footer {
+  text-align: center;
+  margin: 22px 6px 0 6px;
+  color: var(--pch-sidebar-text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+  opacity: 0.65;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+/* ----- PetCareHub MAIN AREA ------ */
+.pch-main-content {
+  flex: 1;
+  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
+  padding: 44px 42px 36px 48px;
+  min-height: 100vh;
+  box-shadow: var(--pch-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.pch-main-header {
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+.pch-main-header h1 {
+  color: var(--pch-primary);
+  font-size: 2.3rem;
+  margin: 0 0 3px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.pch-main-subtitle {
+  color: var(--pch-accent);
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+}
+
+/* Widgets section */
+.pch-widget-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.pch-widget {
+  background: var(--pch-card-bg);
+  border-radius: 18px;
+  box-shadow: 0 5px 45px 0 rgba(91,115,88,0.07);
+  padding: 32px 30px 32px 26px;
+  min-height: 156px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid #e2dda6;
+  transition: box-shadow 0.23s;
+}
+.pch-widget-highlight {
+  border: 2px solid var(--pch-primary);
+  background: linear-gradient(110deg, #e2dda6 80%, #879d85 100%);
+}
+.pch-widget h2 {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.pch-widget-placeholder {
+  color: var(--pch-accent);
+  font-size: 1.03em;
+  opacity: 0.72;
+  letter-spacing: 0.01em;
+  padding-top: 5px;
+}
+
+.pch-widget:hover,
+.pch-widget-highlight:hover {
+  box-shadow: 0 10px 50px 0 rgba(91,115,88,0.19);
 }
