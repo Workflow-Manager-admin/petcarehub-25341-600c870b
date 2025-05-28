@@ -1579,19 +1579,7 @@ body {
   z-index: 2;
 }
 
-.navbar {
-  background-color: var(--kavia-dark);
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 100;
-}
+/* removed legacy .navbar styles, use only .pch-top-navbar for top nav */
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
 /* --- Top Navbar --- */
