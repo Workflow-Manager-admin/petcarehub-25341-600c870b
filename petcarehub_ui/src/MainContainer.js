@@ -16,6 +16,37 @@ import Settings from './components/Settings';
 function MainContainer() {
   // Track selected navigation tab
   const [active, setActive] = useState('Pets');
+
+  // PETS and MEDICAL STATEFUL DATA
+  const [pets, setPets] = useState([]); // [{id, name, age, breed, ...}]
+  // Track the currently "selected" pet by id (for Medical section) - we'll default to first pet if available
+  const [selectedPetId, setSelectedPetId] = useState(null);
+
+  // Dictionary of petId to their medical records (scoped per pet)
+  const [medicalRecords, setMedicalRecords] = useState({}); // {petId: { history: [...], vaccinations: [...], prescriptions: [...], visits: [...] }}
+
+  // Update Pets (CRUD performed in PetList, flows up and down)
+  function handlePetsChange(newPets) {
+    setPets(newPets);
+    // If a pet is deleted, and it was selected, update selectedPetId to another or null
+    if (selectedPetId && !newPets.some(p => p.id === selectedPetId)) {
+      setSelectedPetId(newPets.length ? newPets[0].id : null);
+    }
+  }
+
+  // Handler: Called to change selected pet (e.g., from dropdown UI in medical records)
+  function handleSelectPet(petId) {
+    setSelectedPetId(petId);
+  }
+
+  // Handler: CRUD for medical records per pet
+  function handleMedicalChange(petId, newMedical) {
+    setMedicalRecords(prev => ({
+      ...prev,
+      [petId]: newMedical
+    }));
+  }
+
   // List of section mappings
   const navSections = [
     { key: 'Pets', icon: '🐶', label: 'Pets' },
@@ -28,19 +59,50 @@ function MainContainer() {
   function getActiveSection(tab) {
     switch(tab) {
       case 'Pets':
-        return <PetList />;
+        // Propagate pet state to PetList for CRUD operations
+        return (
+          <PetList
+            pets={pets}
+            setPets={handlePetsChange}
+            selectedPetId={selectedPetId}
+            setSelectedPetId={setSelectedPetId}
+          />
+        );
       case 'Routines':
         return <RoutineTracker />;
       case 'Medical':
-        return <MedicalRecords />;
+        // Only show MedicalRecords if pets exist
+        return (
+          <MedicalRecords
+            pets={pets}
+            selectedPetId={selectedPetId ?? (pets.length ? pets[0].id : null)}
+            selectPet={handleSelectPet}
+            medical={medicalRecords}
+            setMedicalRecords={handleMedicalChange}
+          />
+        );
       case 'Reminders':
         return <Reminders />;
       case 'Settings':
         return <Settings />;
       default:
-        return <PetList />;
+        return (
+          <PetList
+            pets={pets}
+            setPets={handlePetsChange}
+            selectedPetId={selectedPetId}
+            setSelectedPetId={setSelectedPetId}
+          />
+        );
     }
   }
+
+  // Update selectedPetId if pets are loaded but selectedPetId is null
+  React.useEffect(() => {
+    if (pets.length && (selectedPetId === null || !pets.find(p => p.id === selectedPetId))) {
+      setSelectedPetId(pets[0].id);
+    }
+  }, [pets, selectedPetId]);
 
   return (
     <div className="pch-main-layout">
@@ -84,7 +146,7 @@ function MainContainer() {
                 <span className="pch-summary-graphic" role="img" aria-label="pets">🐱🐶</span>
                 <div>
                   <span className="pch-summary-title">Registered Pets</span>
-                  <div className="pch-summary-main-value">3</div>
+                  <div className="pch-summary-main-value">{pets.length}</div>
                   <span className="pch-summary-desc">Track all your furry friends!</span>
                 </div>
               </div>
