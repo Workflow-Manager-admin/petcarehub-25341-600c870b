@@ -4,7 +4,19 @@
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
+
+  /* PetCareHub Custom Colors */
+  --pch-primary: #879d85;
+  --pch-secondary: #e2dda6;
+  --pch-accent: #656461;
+  --pch-sidebar-bg: var(--pch-primary);
+  --pch-sidebar-text: #fff;
+  --pch-sidebar-active: var(--pch-secondary);
+  --pch-main-bg: #f5f6fa;
+  --pch-card-bg: #fff;
+  --pch-shadow: 0 4px 18px 2px rgba(80,110,78,0.07);
 }
+
 
 body {
   margin: 0;
