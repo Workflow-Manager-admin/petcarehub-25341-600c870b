@@ -8,6 +8,12 @@ import RoutineTracker from './components/RoutineTracker';
 import MedicalRecords from './components/MedicalRecords';
 import Reminders from './components/Reminders';
 import Settings from './components/Settings';
+// Import the newly nested pages
+import SettingsPage from './pages/SettingsPage';
+import ContactHelp from './pages/ContactHelp';
+import AboutPrivacy from './pages/AboutPrivacy';
+import Login from './pages/Auth/Login';
+import Signup from './pages/Auth/Signup';
 
 /**
  * PUBLIC_INTERFACE
