@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+
+// Placeholder imports
+import PetList from './components/PetList';
+import RoutineTracker from './components/RoutineTracker';
+import MedicalRecords from './components/MedicalRecords';
+import Reminders from './components/Reminders';
+import Settings from './components/Settings';
 
 /**
  * PUBLIC_INTERFACE
