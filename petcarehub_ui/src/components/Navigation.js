@@ -35,23 +35,28 @@ function Navigation() {
       ]
     },
     { label: 'Notifications', icon: '🔔', to: '/notifications' },
-    { label: 'Settings', icon: '⚙️', to: '/settings' },
     {
-      label: 'Support',
-      icon: '❓',
-      to: '/contact',
+      label: 'Settings',
+      icon: '⚙️',
+      to: '/settings',
       dropdown: [
-        { label: 'Contact / Help', to: '/contact' },
-        { label: 'About & Privacy', to: '/about' }
-      ]
-    },
-    {
-      label: 'Auth',
-      icon: '🔐',
-      to: '/auth',
-      dropdown: [
-        { label: 'Login', to: '/auth/login' },
-        { label: 'Sign Up', to: '/auth/signup' }
+        { label: 'Settings Home', to: '/settings' },
+        {
+          label: 'Support',
+          to: '/contact',
+          dropdown: [
+            { label: 'Contact / Help', to: '/contact' },
+            { label: 'About & Privacy', to: '/about' }
+          ]
+        },
+        {
+          label: 'Account',
+          to: '/auth',
+          dropdown: [
+            { label: 'Login', to: '/auth/login' },
+            { label: 'Sign Up', to: '/auth/signup' }
+          ]
+        }
       ]
     }
   ];
