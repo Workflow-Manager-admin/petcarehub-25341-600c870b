@@ -319,6 +319,216 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* --- Dashboard summary highlights at the top (just below main header) --- */
+.pch-dashboard-summary {
+  display: flex;
+  gap: 32px;
+  margin: 22px 0 28px 0;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.pch-summary-highlight {
+  background: linear-gradient(99deg, #f3f6e6 62%, #e2dda6cc 100%);
+  border-radius: 16px;
+  box-shadow: 0 3px 18px 0 rgba(135,157,133,0.15);
+  border: 1.5px solid var(--pch-secondary);
+  padding: 19px 32px 18px 22px;
+  display: flex;
+  align-items: center;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+  min-height: 84px;
+  position: relative;
+  gap: 18px;
+  z-index: 1;
+  cursor: pointer;
+  transition:  box-shadow 0.19s, border-color 0.16s;
+}
+.pch-summary-highlight:hover, .pch-summary-highlight:focus-within {
+  box-shadow: 0 10px 44px 0 rgba(120,160,96,0.15);
+  border: 2.2px solid var(--pch-primary);
+  background: linear-gradient(97deg, #e2dda6 88%, #879d85 100%);
+}
+.pch-summary-graphic {
+  font-size: 2.5em;
+  margin-right: 11px;
+  filter: drop-shadow(0 6px 12px #879d8577);
+}
+.pch-summary-title {
+  color: var(--pch-accent);
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.pch-summary-main-value {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--kavia-orange);
+  line-height: 1.1;
+  margin: 2px 0 2px 0;
+}
+.pch-summary-desc {
+  color: var(--text-secondary);
+  font-size: 0.98em;
+}
+
+@media (max-width: 1100px) {
+  .pch-dashboard-summary {
+    gap: 18px;
+  }
+  .pch-summary-highlight {
+    min-width: 180px;
+    padding: 13px 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .pch-dashboard-summary {
+    flex-direction: column;
+    gap: 14px;
+    margin: 13px 0 17px 0;
+  }
+  .pch-summary-highlight {
+    max-width: unset;
+    min-width: 90px;
+    width: 100%;
+    gap: 13px;
+    padding: 10px 9px 11px 8px;
+  }
+}
+
+/* --- PET CARD PLACEHOLDER --- */
+.pch-widget-section .pch-pet-card {
+  align-items: flex-start;
+  gap: 0.7em;
+  min-width: 0;
+  box-shadow: 0 9px 30px 0 rgba(80,110,78,0.13);
+  border: 1.9px solid var(--pch-primary);
+  padding-top: 14px;
+  padding-bottom: 16px;
+  transition: box-shadow 0.18s, border-color 0.14s;
+}
+.pch-widget-section .pch-pet-card:hover,
+.pch-widget-section .pch-pet-card:focus-within {
+  box-shadow: 0 22px 60px 0 rgba(120,160,96,0.18), 0 2px 12px 0 rgba(135,157,133,0.13);
+  border-color: var(--kavia-orange);
+}
+
+.pch-pet-photo-mock {
+  width: 67px;
+  height: 67px;
+  background: linear-gradient(125deg, #e2dda6cc 65%, #ffffff 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+  margin-top: 8px;
+  margin-right: 4px;
+  font-size: 2.3rem;
+  box-shadow: 0 3px 14px 0 #e2dda64d;
+  border: 2.2px solid var(--pch-primary);
+  transition: border-color 0.17s;
+}
+.pch-pet-photo-mock .pch-pet-photo-emoji {
+  font-size: 2.0rem;
+}
+
+.pch-pet-dog {
+  background: linear-gradient(135deg, #e87a41 68%, #fffbe7 100%);
+  border-color: var(--kavia-orange);
+}
+.pch-pet-bird {
+  background: linear-gradient(120deg, #d1f1fb 68%, #fafee6 100%);
+}
+
+.pch-pet-name {
+  font-size: 1.18em;
+  color: var(--pch-accent);
+  margin-bottom: 2px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.pch-pet-details {
+  font-size: 0.99em;
+  color: var(--pch-accent);
+  opacity: 0.70;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+}
+
+.pch-card-badge {
+  background-color: var(--pch-secondary);
+  padding: 3.5px 18px;
+  border-radius: 13px;
+  color: var(--kavia-dark);
+  font-size: 0.93em;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-top: 6px;
+  box-shadow: 0 5px 17px 0 #e2dda675;
+}
+
+/* --- Modern CTA Widget Box Styling --- */
+.pch-widget-cta {
+  border: 2px solid var(--kavia-orange);
+  background: linear-gradient(99deg,#fffaf4 72%,#f9e9d1 100%);
+  align-items: flex-start;
+  gap: 7px;
+  box-shadow: 0 4px 19px 0 #e2dda655, 0 1px 5px #879d8511;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  user-select: none;
+  position: relative;
+}
+.pch-widget-cta:focus-within {
+  outline: var(--outline-accent);
+  border-color: var(--pch-accent);
+  box-shadow: 0 8px 29px 0 #e2dda6aa, 0 2px 20px #879d8541;
+}
+.pch-widget-icon {
+  font-size: 2.2em;
+  margin-bottom: 6px;
+  margin-left: 2px;
+  color: var(--pch-accent);
+  text-shadow: 0 3px 14px #e2dda679;
+}
+
+.pch-main-paw-header {
+  font-size: 0.85em;
+  vertical-align: baseline;
+  letter-spacing: -0.13em;
+  margin-left: 0.3em;
+  opacity: 0.65;
+  filter: drop-shadow(0 2px 2px #e2dda67a);
+}
+
+@media (max-width: 900px) {
+  .pch-widget-section .pch-pet-card,
+  .pch-widget-cta {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .pch-dashboard-summary { gap: 7px;}
+}
+
+@media (max-width: 650px) {
+  .pch-summary-highlight,
+  .pch-widget-cta,
+  .pch-widget-section .pch-pet-card {
+    padding: 10px 6px 13px 8px;
+    min-width: 0;
+  }
+  .pch-dashboard-summary {
+    gap: 5px;
+  }
+}
+
 /* ----- PetCareHub MAIN LAYOUT ------ */
 .pch-main-layout {
   display: flex;
