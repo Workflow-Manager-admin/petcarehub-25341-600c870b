@@ -120,8 +120,8 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   flex-direction: column;
   margin-top: 4px;
 }
-.pch-navbar-dropdown.open .pch-dropdown-menu,
-.pch-navbar-dropdown:hover .pch-dropdown-menu {
+.pch-navbar-dropdown.open > .pch-dropdown-menu,
+.pch-navbar-dropdown:hover > .pch-dropdown-menu {
   display: flex;
 }
 .pch-dropdown-menu li {
@@ -134,7 +134,7 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   font-weight: 500;
   padding: 0.68em 1.24em;
   background: none;
-  transition: 
+  transition:
     background 0.16s,
     color 0.16s,
     font-weight 0.16s,
@@ -161,9 +161,51 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   outline-offset: 1.5px;
   box-shadow: 0 0 0 2px var(--kavia-orange), 0 0 4px #fff7;
 }
+
+/* NESTED DROPDOWN (support for Settings > Support/Account levels) */
+.pch-navbar-dropdown-level1 {
+  position: relative;
+}
+
+.pch-navbar-dropdown-level1 > .pch-dropdown-menu {
+  position: absolute;
+  left: 98%;
+  top: 4px;
+  min-width: 168px;
+  background: rgba(22,22,22, 0.99);
+  border-radius: 8px;
+  box-shadow: 0 3px 20px #222a 0.5;
+  z-index: 110;
+  margin-top: 0;
+  margin-left: 4px;
+}
+
+.pch-navbar-dropdown-level1 > .pch-dropdown-menu li .pch-navbar-link {
+  padding-left: 2.2em;
+}
+
+/* Slightly indent second-level menus for visual hierarchy */
+.pch-navbar-dropdown-level2 > .pch-dropdown-menu {
+  left: 98%;
+  top: 4px;
+}
+
+/* Make nested dropdown arrow point right at level1/2+ */
+.pch-navbar-dropdown-level1 > .pch-navbar-link > .pch-dropdown-arrow,
+.pch-navbar-dropdown-level2 > .pch-navbar-link > .pch-dropdown-arrow {
+  transform: rotate(-90deg);
+  margin-left: 0.38em;
+}
+
+/* On mobile, adjust dropdown display for nested structure */
 @media (max-width: 900px) {
   .pch-navbar-container {
     padding: 0 0.5em;
+    font-size: 0.98em;
+  }
+  .pch-dropdown-menu,
+  .pch-navbar-dropdown-level1 > .pch-dropdown-menu {
+    min-width: 140px;
     font-size: 0.98em;
   }
 }
