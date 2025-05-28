@@ -137,12 +137,19 @@ function MainContainer() {
               onToggleDone={handleToggleDoneReminder}
             />
           } />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/contact" element={<div>Contact / Help Placeholder</div>} />
-          <Route path="/about" element={<div>About & Privacy Placeholder</div>} />
-          {/* Auth pages */}
-          <Route path="/auth/login" element={<div>Login Placeholder</div>} />
-          <Route path="/auth/signup" element={<div>Signup Placeholder</div>} />
+
+          {/* Settings and nested routes */}
+          <Route path="/settings" element={<SettingsPage />}>
+            <Route index element={<Settings />} />
+            <Route path="support" element={<ContactHelp />} />
+            <Route path="account/login" element={<Login />} />
+            <Route path="account/signup" element={<Signup />} />
+          </Route>
+          {/* Backward compatibility redirects or fallbacks for old paths */}
+          <Route path="/contact" element={<ContactHelp />} />
+          <Route path="/about" element={<AboutPrivacy />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/signup" element={<Signup />} />
         </Routes>
         <Outlet />
       </main>
