@@ -82,7 +82,16 @@ function MainContainer() {
           />
         );
       case 'Reminders':
-        return <Reminders />;
+        return <Reminders
+          reminders={reminders}
+          pets={pets}
+          routines={[]} // Placeholder
+          medicalRecords={medicalRecords}
+          onAdd={handleAddReminder}
+          onEdit={handleEditReminder}
+          onDelete={handleDeleteReminder}
+          onToggleDone={handleToggleDoneReminder}
+        />;
       case 'Settings':
         return <Settings />;
       default:
