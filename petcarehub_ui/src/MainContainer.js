@@ -256,6 +256,33 @@ function MainContainer() {
           <span className="pch-logo-title">PetCareHub</span>
         </div>
         <div className="pch-navbar-navlinks">
+          {/* Home/Dashboard button */}
+          <a
+            href="#"
+            className={`pch-navbar-link pch-navbar-home${active === 'Pets' ? ' active' : ''}`}
+            onClick={e => {
+              e.preventDefault();
+              // Reset all navigation/content to show main dashboard (Pets)
+              setActive('Pets');
+              // Optionally, we could also reset scroll etc. here if desired.
+            }}
+            tabIndex={0}
+            aria-current={active === 'Pets' ? 'page' : undefined}
+            style={{
+              fontWeight: 700,
+              letterSpacing: '0.02em',
+              fontSize: '1.06em',
+              color: 'var(--kavia-orange)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4em',
+              marginRight: 20,
+            }}
+            aria-label="Go to dashboard"
+          >
+            <span role="img" aria-label="dashboard" style={{fontSize: '1.15em'}}>🏠</span>
+            Home
+          </a>
           {navSections.map(nav => (
             <a
               key={nav.key}
