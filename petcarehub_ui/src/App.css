@@ -2937,14 +2937,7 @@ body {
   z-index: 2;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
+/* Remove old .container class - not used in current glass/modern layout */
 /* ----- PetCareHub MAIN LAYOUT ------ */
 /* --- Top Navbar --- */
 .pch-top-navbar {
