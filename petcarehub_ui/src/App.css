@@ -160,12 +160,14 @@
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -387,12 +389,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -610,12 +614,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -841,12 +847,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -1066,12 +1074,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -1287,12 +1297,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -1512,12 +1524,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -1739,12 +1753,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -1962,12 +1978,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -2186,12 +2204,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -2411,12 +2431,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -2640,12 +2662,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -2861,12 +2885,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
@@ -3083,12 +3109,14 @@ body {
 /* ----- PetCareHub MAIN AREA ------ */
 .pch-main-content {
   flex: 1;
-  background: linear-gradient(98deg,#fafcf7 76%,#e7e8d0 100%);
-  padding: 44px 42px 36px 48px;
+  background: linear-gradient(96deg,#fafcf7 77%,#eef2da 100%);
+  padding: 50px 56px 38px 56px;
   min-height: 100vh;
   box-shadow: var(--pch-shadow);
   display: flex;
   flex-direction: column;
+  border-radius: 22px 0 0 22px;
+  margin: 0 0 0 0;
 }
 
 .pch-main-header {
