@@ -75,18 +75,26 @@ function Navigation() {
           onMouseEnter={() => setActiveDropdown(nav.label)}
           onMouseLeave={() => setActiveDropdown(null)}
         >
-          <span className="pch-navbar-link" tabIndex={0} aria-haspopup="true">
-            {nav.icon && <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>}
-            {nav.label}
-            <span className="pch-dropdown-arrow">▼</span>
-          </span>
+          {nav.to ? (
+            <span className="pch-navbar-link" tabIndex={0} aria-haspopup="true">
+              {nav.icon && <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>}
+              {nav.label}
+              <span className="pch-dropdown-arrow">{level === 0 ? '▼' : '▶'}</span>
+            </span>
+          ) : (
+            <span className="pch-navbar-link" tabIndex={0} aria-haspopup="true">
+              {nav.icon && <span className="pch-nav-icon" role="img" aria-label={nav.label}>{nav.icon}</span>}
+              {nav.label}
+              <span className="pch-dropdown-arrow">{level === 0 ? '▼' : '▶'}</span>
+            </span>
+          )}
           <ul className="pch-dropdown-menu pch-dropdown-menu-nest">
-            {
-              nav.dropdown.map((sub) =>
-                sub.dropdown
-                  ? renderNavItem(sub, level + 1)
-                  : (
-                    <li key={sub.to}>
+            {nav.dropdown.map((sub, i) =>
+              sub.dropdown
+                ? renderNavItem(sub, level + 1)
+                : (
+                  <li key={sub.to || sub.label + '-' + i}>
+                    {sub.to ? (
                       <NavLink
                         className={({ isActive }) =>
                           "pch-navbar-link" + (isActive ? " active" : "")
@@ -96,10 +104,13 @@ function Navigation() {
                       >
                         {sub.label}
                       </NavLink>
-                    </li>
-                  )
-              )
-            }
+                    ) : (
+                      // Submenu heading (should not occur, but fallback)
+                      <span className="pch-navbar-link">{sub.label}</span>
+                    )}
+                  </li>
+                )
+            )}
           </ul>
         </li>
       );
