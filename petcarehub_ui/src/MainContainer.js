@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './App.css';
 
 import PetList from './components/PetList';
@@ -9,7 +9,7 @@ import Settings from './components/Settings';
 
 /**
  * PUBLIC_INTERFACE
- * MainContainer is the primary layout wrapper for PetCareHub. 
+ * MainContainer is the primary layout wrapper for PetCareHub.
  * It features a responsive, modern sidebar and a beautiful dashboard with engaging widgets and graphic placeholders.
  */
 function MainContainer() {
@@ -54,7 +54,7 @@ function MainContainer() {
   }
 
   // Update reminders if pets are deleted -- clean up dangling reminders
-  React.useEffect(() => {
+  useEffect(() => {
     setReminders(prev => prev.filter(r =>
       r.petId == null ||
       pets.some(p => p.id === r.petId)
@@ -62,7 +62,7 @@ function MainContainer() {
   }, [pets]);
 
   // Update selectedPetId if pets change
-  React.useEffect(() => {
+  useEffect(() => {
     if (pets.length && (selectedPetId === null || !pets.find(p => p.id === selectedPetId))) {
       setSelectedPetId(pets[0].id);
     }
@@ -87,6 +87,103 @@ function MainContainer() {
       ...prev,
       [petId]: newMedical
     }));
+  }
+
+  // Dashboard Summary Panel Logic --------------------------
+
+  // Helpers for reminders
+  function getNextReminderUrgency(reminder) {
+    if (!reminder?.dueDate || reminder.done) return "normal";
+    const now = new Date();
+    const due = new Date(reminder.dueDate);
+    const diff = due - now;
+    if (diff < 0) return "overdue";
+    if (diff < 2 * 24 * 60 * 60 * 1000) return "soon"; // <2 days
+    return "normal";
+  }
+
+  // Next reminder (soonest, not done, by dueDate)
+  const nextReminder = useMemo(() => {
+    const notDone = reminders.filter(r => !r.done && r.dueDate);
+    if (notDone.length === 0) return null;
+    notDone.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+    return notDone[0];
+  }, [reminders]);
+
+  // Format time difference for next reminder and medical events
+  function formatTimeDistance(dueDate) {
+    try {
+      const now = new Date();
+      const due = new Date(dueDate);
+      let diff = due - now;
+      let pfx = '';
+      if (diff < 0) {
+        diff = Math.abs(diff);
+        pfx = '';
+      }
+      const min = 60 * 1000, hr = 60 * min, day = 24 * hr;
+      if (diff < hr)
+        return `${Math.round(diff / min)} min`;
+      if (diff < day)
+        return `${Math.round(diff / hr)} hr`;
+      return `${Math.round(diff / day)} day${Math.round(diff / day) !== 1 ? 's' : ''}`;
+    } catch {
+      return '';
+    }
+  }
+
+  // Routines today (demo uses static, can be replaced with state in routine feature)
+  const todayRoutineCount = 0; // Replace with future routines state
+
+  // Medical/Health - upcoming vet visits or vaccinations due "soon"
+  // Scan all pets' med records for visits and vaccinations within next 30 days
+  const dueHealthList = useMemo(() => {
+    const now = new Date();
+    const soonThreshold = 30 * 24 * 60 * 60 * 1000;
+    let dueArr = [];
+    pets.forEach(pet => {
+      const med = medicalRecords[pet.id] || {};
+      // Vet Visits
+      (med.visits || []).forEach(v => {
+        if (v.date) {
+          const visitDate = new Date(v.date);
+          const diff = visitDate - now;
+          if (diff > 0 && diff < soonThreshold) {
+            dueArr.push({ petId: pet.id, type: 'visit', label: `Vet Visit`, date: v.date, vet: v.vet });
+          }
+        }
+      });
+      // Upcoming vaccinations
+      (med.vaccinations || []).forEach(vc => {
+        if (vc.date) {
+          const vaxDate = new Date(vc.date);
+          const diff = vaxDate - now;
+          if (diff > 0 && diff < soonThreshold) {
+            dueArr.push({ petId: pet.id, type: 'vaccination', label: `Vaccination`, date: vc.date, name: vc.vaccine });
+          }
+        }
+      });
+    });
+    return dueArr;
+  }, [medicalRecords, pets]);
+
+  const dueHealthCount = dueHealthList.length;
+
+  // Label for medical/health summary
+  let dueHealthLabel = '';
+  if (dueHealthCount > 0) {
+    // Give a quick summary - up to two events, show which pets
+    dueHealthLabel = dueHealthList.slice(0,2)
+      .map(ev => {
+        const pname = pets.find(p => p.id === ev.petId)?.name || "";
+        let dt = '';
+        try { dt = new Date(ev.date).toLocaleDateString(undefined, {month:"short", day:"numeric"}); } catch {}
+        return `${ev.label} for ${pname} (${dt})`;
+      })
+      .join(', ');
+    if (dueHealthCount > 2) dueHealthLabel += ` and ${dueHealthCount-2} more`;
+  } else {
+    dueHealthLabel = "No health events soon";
   }
 
   // Nav sections
@@ -186,7 +283,9 @@ function MainContainer() {
         {/* Dashboard summary only on Pets */}
         {active === 'Pets' && (
           <>
+            {/* DASHBOARD SUMMARY CARDS - Responsive, state driven */}
             <section className="pch-dashboard-summary" aria-label="Summary Highlights">
+              {/* Registered Pets */}
               <div className="pch-summary-highlight pch-summary-pets">
                 <span className="pch-summary-graphic" role="img" aria-label="pets">🐱🐶</span>
                 <div>
@@ -195,20 +294,68 @@ function MainContainer() {
                   <span className="pch-summary-desc">Track all your furry friends!</span>
                 </div>
               </div>
-              <div className="pch-summary-highlight pch-summary-routine">
+              {/* Next Reminder */}
+              <div className="pch-summary-highlight pch-summary-reminder" tabIndex={0} style={{cursor:'pointer', transition:'box-shadow .18s'}}>
+                <span className="pch-summary-graphic" role="img" aria-label="reminder">🔔</span>
+                <div>
+                  <span className="pch-summary-title">Next Reminder</span>
+                  <div className="pch-summary-main-value" style={{
+                    color: getNextReminderUrgency(nextReminder) === 'overdue'
+                      ? '#e96565'
+                      : getNextReminderUrgency(nextReminder) === 'soon'
+                        ? '#e7c341'
+                        : undefined
+                  }}>
+                    {nextReminder
+                      ? <>
+                          {nextReminder.title}
+                          {getNextReminderUrgency(nextReminder) === 'overdue' && <span style={{marginLeft:6, color:'#b12f2f'}}>⚠️</span>}
+                          {getNextReminderUrgency(nextReminder) === 'soon' && <span style={{marginLeft:6, color:'#a48a15'}}>⏰</span>}
+                        </>
+                      : <span style={{color:'#757832'}}>No reminders</span>
+                    }
+                  </div>
+                  <span className="pch-summary-desc" style={{fontSize:'0.97em'}}>
+                    {nextReminder
+                      ? (nextReminder.dueDate && !nextReminder.done
+                        ? (
+                          <span>
+                            {getNextReminderUrgency(nextReminder) === 'overdue'
+                              ? `Overdue by ${formatTimeDistance(nextReminder.dueDate)}`
+                              : `In ${formatTimeDistance(nextReminder.dueDate)}`}
+                            {nextReminder.petId && pets.find(p=>p.id===nextReminder.petId)
+                              ? <> for <b>{pets.find(p=>p.id===nextReminder.petId).name}</b></>
+                              : null}
+                          </span>
+                        ) : <span>Completed</span>)
+                      : "Stay on top of your pet care!"
+                    }
+                  </span>
+                </div>
+              </div>
+              {/* Routines (static for demo; ready for future stateful wireup) */}
+              <div className="pch-summary-highlight pch-summary-routine" tabIndex={0}>
                 <span className="pch-summary-graphic" role="img" aria-label="routine">🗓️</span>
                 <div>
                   <span className="pch-summary-title">Routines Today</span>
-                  <div className="pch-summary-main-value">5</div>
+                  <div className="pch-summary-main-value">{typeof todayRoutineCount === "number" ? todayRoutineCount : 0}</div>
                   <span className="pch-summary-desc">From walks to feeding times</span>
                 </div>
               </div>
-              <div className="pch-summary-highlight pch-summary-health">
+              {/* Medical/Health summary */}
+              <div className="pch-summary-highlight pch-summary-health" tabIndex={0}>
                 <span className="pch-summary-graphic" role="img" aria-label="health">🩺</span>
                 <div>
                   <span className="pch-summary-title">Health Tasks</span>
-                  <div className="pch-summary-main-value">2</div>
-                  <span className="pch-summary-desc">Upcoming vet visits</span>
+                  <div className="pch-summary-main-value">
+                    {dueHealthCount > 0
+                      ? dueHealthCount
+                      : <span style={{color:'#757832'}}>None</span>
+                    }
+                  </div>
+                  <span className="pch-summary-desc">
+                    {dueHealthLabel}
+                  </span>
                 </div>
               </div>
             </section>
