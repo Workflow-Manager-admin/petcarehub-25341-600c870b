@@ -22,11 +22,167 @@
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -530,11 +686,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -824,11 +1136,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -1126,11 +1594,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -1422,11 +2046,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -1714,11 +2494,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -2010,11 +2946,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -2308,11 +3400,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -2602,11 +3850,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -2897,11 +4301,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -3193,11 +4753,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -3493,11 +5209,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -3785,11 +5657,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
@@ -4078,11 +6106,167 @@ body {
 }
 
 /* ----- PetCareHub MAIN LAYOUT ------ */
-.pch-main-layout {
+/* --- Top Navbar --- */
+.pch-top-navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 90;
+  left: 0; top: 0;
+  height: 66px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 40px 0 rgba(120, 143, 111, 0.13), 0 0.5px 0 rgba(220,220,220,0.11);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px 0 18px;
+  backdrop-filter: blur(11px) saturate(145%) brightness(1.08);
+  border-bottom: 1.5px solid var(--pch-secondary);
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.pch-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  color: var(--pch-accent);
+  padding: 0 0 0 7px;
+  background: none;
+  border-radius: 18px;
+}
+.pch-navbar-logo .pch-logo-icon {
+  background: var(--pch-sidebar-active);
+  border-radius: 50%;
+  color: var(--pch-accent);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.02em;
+  margin-right: 7px;
+  border: 2px solid rgba(89,119,89,0.13);
+  box-shadow: 0 1px 6px #e2dda681;
+}
+.pch-navbar-logo .pch-logo-title { font-size: 1.11em;}
+.pch-navbar-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pch-navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.07em;
+  color: var(--pch-accent);
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.88;
+  border-radius: 17px;
+  padding: 8px 20px;
+  background: transparent;
+  letter-spacing: 0.01em;
+  transition: 
+    color 0.17s,
+    background 0.22s cubic-bezier(.78,.37,0,1.06),
+    box-shadow 0.17s,
+    font-weight 0.09s;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+}
+.pch-navbar-link.active,
+.pch-navbar-link:hover,
+.pch-navbar-link:focus-visible {
+  background: linear-gradient(92deg, var(--pch-sidebar-active) 62%, #f5ecd1e9 100%);
+  color: var(--kavia-orange);
+  font-weight: 700;
+  opacity: 1;
+  box-shadow: 0 6px 22px 0 rgba(175,155,120,0.12);
+  outline: none;
+  text-shadow: 0 0.6px 2.5px #e2dda69e, 0 0 1.2px var(--pch-accent, #65646146);
+}
+.pch-navbar-link .pch-nav-icon {
+  font-size: 1.19em;
+  margin-right:3px;
+}
+.pch-navbar-footer {
+  color: var(--pch-accent);
+  opacity: 0.70;
+  font-size: 0.98em;
+  padding-left: 19px;
+  padding-right: 13px;
+  font-weight: 400;
+}
+
+/* Adjust main layout and main content for fixed navbar */
+.pch-main-layout.top-navbar {
+  flex-direction: column;
   min-height: 100vh;
-  background: var(--pch-main-bg);
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+.pch-main-content.with-navbar {
+  margin-top: 70px;
+  border-radius: 20px;
+  /* softened corners for modern look */
+  background: linear-gradient(98deg,#fafcf7 76%,#eef2da 100%);
+  box-shadow: 0 10px 64px 0 rgba(120,143,111,0.14), 0 2px 10px 0 rgba(135,157,133,0.08);
+}
+@media (max-width: 700px) {
+  .pch-top-navbar {
+    flex-direction: column;
+    height: 92px;
+    padding-top:6px;
+    align-items: flex-start;
+  }
+  .pch-navbar-navlinks {
+    gap: 3vw;
+    width:100vw;
+  }
+  .pch-main-content.with-navbar {
+    margin-top: 97px;
+    border-radius: 0;
+    padding: 15px 1vw 12px 1vw;
+  }
+}
+
+/* Hide old sidebar if present (migration CSS guard) */
+.pch-sidebar, .pch-sidebar-logo, .pch-sidebar-footer {
+  display: none !important;
+}
+
+/* Dashboard summary enhancements */
+.pch-dashboard-summary {
+  background: rgba(255,255,255,0.8);
+  border-radius: 18px;
+  box-shadow: 0 2px 14px 0 #e2dda661;
+  padding: 10px 9px 11px 16px;
+  margin-bottom: 30px;
+  margin-top: 7px;
+  backdrop-filter: blur(4.7px) saturate(128%) brightness(1.05);
+  border: 1px solid var(--pch-secondary);
+}
+
+/* Modern glassy card enhancements for widgets, summary, etc. */
+.pch-widget, .pch-summary-highlight, .pch-widget-cta, .pch-pet-card {
+  background: rgba(255,255,255,0.62) !important;
+  box-shadow: 0 8px 38px 0 rgba(120,143,111,0.10), 0 2px 7px 0 rgba(135,157,133,0.12) !important;
+  border: 1.5px solid var(--pch-secondary) !important;
+}
+
+.pch-widget:hover, .pch-summary-highlight:hover, .pch-pet-card:hover,
+.pch-widget:focus-within, .pch-summary-highlight:focus-within, .pch-pet-card:focus-within {
+  box-shadow: 0 12px 52px 0 rgba(120,143,111,0.14), 0 5px 20px #e2dda688 !important;
+  border-color: var(--kavia-orange) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.pch-widget-placeholder, .pch-main-subtitle, .pch-navbar-footer, .pch-summary-desc {
+  font-style: italic;
+  opacity: 0.80;
 }
 
 .pch-sidebar {
