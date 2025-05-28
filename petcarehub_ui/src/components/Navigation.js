@@ -41,19 +41,18 @@ function Navigation() {
       to: '/settings',
       dropdown: [
         { label: 'Settings Home', to: '/settings' },
-        // Support and Account (Auth) as submenu
         {
           label: 'Support',
           dropdown: [
-            { label: 'Contact / Help', to: '/settings/support' },
-            { label: 'About & Privacy', to: '/settings/about' }
+            { label: 'Contact / Help', to: '/contact' },
+            { label: 'About & Privacy', to: '/about' }
           ]
         },
         {
           label: 'Account',
           dropdown: [
-            { label: 'Login', to: '/settings/account/login' },
-            { label: 'Sign Up', to: '/settings/account/signup' }
+            { label: 'Login', to: '/auth/login' },
+            { label: 'Sign Up', to: '/auth/signup' }
           ]
         }
       ]
