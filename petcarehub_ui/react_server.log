@@ -69,3 +69,14 @@ Module not found: Error: Can't resolve './Navigation.css' in '/home/kavia/worksp
 
 webpack compiled with 1 error and 1 warning
 Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './Navigation.css' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/src/components'
+WARNING in [eslint] 
+src/MainContainer.js
+  Line 7:8:  'RoutineTracker' is defined but never used  no-unused-vars
+
+ERROR in ./src/components/Navigation.js 7:0-26
+Module not found: Error: Can't resolve './Navigation.css' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/src/components'
+
+webpack compiled with 1 error and 1 warning
