@@ -19,3 +19,35 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 Compiling...
+Failed to compile.
+
+[eslint] 
+src/MainContainer.js
+  Line 142:45:  'SettingsPage' is not defined  react/jsx-no-undef
+  Line 144:45:  'ContactHelp' is not defined   react/jsx-no-undef
+  Line 145:51:  'Login' is not defined         react/jsx-no-undef
+  Line 146:52:  'Signup' is not defined        react/jsx-no-undef
+  Line 149:44:  'ContactHelp' is not defined   react/jsx-no-undef
+  Line 150:42:  'AboutPrivacy' is not defined  react/jsx-no-undef
+  Line 151:47:  'Login' is not defined         react/jsx-no-undef
+  Line 152:48:  'Signup' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/MainContainer.js
+  Line 7:8:  'RoutineTracker' is defined but never used  no-unused-vars
+
+ERROR in [eslint] 
+src/MainContainer.js
+  Line 142:45:  'SettingsPage' is not defined  react/jsx-no-undef
+  Line 144:45:  'ContactHelp' is not defined   react/jsx-no-undef
+  Line 145:51:  'Login' is not defined         react/jsx-no-undef
+  Line 146:52:  'Signup' is not defined        react/jsx-no-undef
+  Line 149:44:  'ContactHelp' is not defined   react/jsx-no-undef
+  Line 150:42:  'AboutPrivacy' is not defined  react/jsx-no-undef
+  Line 151:47:  'Login' is not defined         react/jsx-no-undef
+  Line 152:48:  'Signup' is not defined        react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
