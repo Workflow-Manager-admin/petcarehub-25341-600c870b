@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './App.css';
 
-// Placeholder imports
 import PetList from './components/PetList';
 import RoutineTracker from './components/RoutineTracker';
 import MedicalRecords from './components/MedicalRecords';
@@ -25,10 +24,53 @@ function MainContainer() {
   // Dictionary of petId to their medical records (scoped per pet)
   const [medicalRecords, setMedicalRecords] = useState({}); // {petId: { history: [...], vaccinations: [...], prescriptions: [...], visits: [...] }}
 
-  // Update Pets (CRUD performed in PetList, flows up and down)
+  // -- REMINDERS STATE & HANDLERS --
+  // Each reminder: {id, title, dueDate, petId, linkedType:'routine'|'medical', linkedId, notes, done:boolean}
+  const [reminders, setReminders] = useState([]);
+
+  // Reminders CRUD
+  function handleAddReminder(reminder) {
+    setReminders(prev => [
+      ...prev,
+      {
+        ...reminder,
+        id: Date.now() + Math.floor(Math.random() * 10000), // Ensure mostly unique
+        done: false
+      }
+    ]);
+  }
+  function handleEditReminder(id, values) {
+    setReminders(prev =>
+      prev.map(r => r.id === id ? { ...r, ...values } : r)
+    );
+  }
+  function handleDeleteReminder(id) {
+    setReminders(prev => prev.filter(r => r.id !== id));
+  }
+  function handleToggleDoneReminder(id) {
+    setReminders(prev =>
+      prev.map(r => r.id === id ? { ...r, done: !r.done } : r)
+    );
+  }
+
+  // Update reminders if pets are deleted -- clean up dangling reminders
+  React.useEffect(() => {
+    setReminders(prev => prev.filter(r =>
+      r.petId == null ||
+      pets.some(p => p.id === r.petId)
+    ));
+  }, [pets]);
+
+  // Update selectedPetId if pets change
+  React.useEffect(() => {
+    if (pets.length && (selectedPetId === null || !pets.find(p => p.id === selectedPetId))) {
+      setSelectedPetId(pets[0].id);
+    }
+  }, [pets, selectedPetId]);
+
+  // Handler: Change pets (add/edit/delete)
   function handlePetsChange(newPets) {
     setPets(newPets);
-    // If a pet is deleted, and it was selected, update selectedPetId to another or null
     if (selectedPetId && !newPets.some(p => p.id === selectedPetId)) {
       setSelectedPetId(newPets.length ? newPets[0].id : null);
     }
@@ -47,7 +89,7 @@ function MainContainer() {
     }));
   }
 
-  // List of section mappings
+  // Nav sections
   const navSections = [
     { key: 'Pets', icon: '🐶', label: 'Pets' },
     { key: 'Routines', icon: '⏰', label: 'Routines' },
@@ -55,11 +97,11 @@ function MainContainer() {
     { key: 'Reminders', icon: '🔔', label: 'Reminders' },
     { key: 'Settings', icon: '⚙️', label: 'Settings' },
   ];
-  // Returns the active placeholder
+
+  // Section content
   function getActiveSection(tab) {
     switch(tab) {
       case 'Pets':
-        // Propagate pet state to PetList for CRUD operations
         return (
           <PetList
             pets={pets}
@@ -71,7 +113,6 @@ function MainContainer() {
       case 'Routines':
         return <RoutineTracker />;
       case 'Medical':
-        // Only show MedicalRecords if pets exist
         return (
           <MedicalRecords
             pets={pets}
@@ -82,16 +123,18 @@ function MainContainer() {
           />
         );
       case 'Reminders':
-        return <Reminders
-          reminders={reminders}
-          pets={pets}
-          routines={[]} // Placeholder
-          medicalRecords={medicalRecords}
-          onAdd={handleAddReminder}
-          onEdit={handleEditReminder}
-          onDelete={handleDeleteReminder}
-          onToggleDone={handleToggleDoneReminder}
-        />;
+        return (
+          <Reminders
+            reminders={reminders}
+            pets={pets}
+            routines={[]} // Routine linkage future
+            medicalRecords={medicalRecords}
+            onAdd={handleAddReminder}
+            onEdit={handleEditReminder}
+            onDelete={handleDeleteReminder}
+            onToggleDone={handleToggleDoneReminder}
+          />
+        );
       case 'Settings':
         return <Settings />;
       default:
@@ -105,13 +148,6 @@ function MainContainer() {
         );
     }
   }
-
-  // Update selectedPetId if pets are loaded but selectedPetId is null
-  React.useEffect(() => {
-    if (pets.length && (selectedPetId === null || !pets.find(p => p.id === selectedPetId))) {
-      setSelectedPetId(pets[0].id);
-    }
-  }, [pets, selectedPetId]);
 
   return (
     <div className="pch-main-layout">
@@ -147,7 +183,7 @@ function MainContainer() {
           </h1>
           <p className="pch-main-subtitle">Your modern pet parenting dashboard</p>
         </header>
-        {/* Render summary highlights only on dashboard (Pets) */}
+        {/* Dashboard summary only on Pets */}
         {active === 'Pets' && (
           <>
             <section className="pch-dashboard-summary" aria-label="Summary Highlights">
