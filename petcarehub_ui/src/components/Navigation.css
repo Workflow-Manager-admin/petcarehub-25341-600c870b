@@ -130,16 +130,36 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
 .pch-dropdown-menu .pch-navbar-link {
   width: 100%;
   border-radius: 0;
-  color: var(--text-color);
+  color: #C0C0C0;
   font-weight: 500;
   padding: 0.68em 1.24em;
   background: none;
+  transition: 
+    background 0.16s,
+    color 0.16s,
+    font-weight 0.16s,
+    text-shadow 0.16s;
+}
+[data-theme="dark"] .pch-dropdown-menu .pch-navbar-link {
+  color: #C0C0C0;
+}
+.pch-dropdown-menu .pch-navbar-link:visited,
+.pch-dropdown-menu .pch-navbar-link:link {
+  color: #C0C0C0;
 }
 .pch-dropdown-menu .pch-navbar-link:hover,
+.pch-dropdown-menu .pch-navbar-link:focus,
 .pch-dropdown-menu .pch-navbar-link.active {
   background: var(--kavia-orange);
-  color: #fff;
-  text-shadow: 0 2px 13px #e781418c;
+  color: #fff !important;
+  text-shadow: 0 2px 13px #e78141b5, 0 0 6px #fff9, 0 0 2px #fff6;
+  font-weight: 700;
+  filter: brightness(1.15);
+}
+.pch-dropdown-menu .pch-navbar-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1.5px;
+  box-shadow: 0 0 0 2px var(--kavia-orange), 0 0 4px #fff7;
 }
 @media (max-width: 900px) {
   .pch-navbar-container {
