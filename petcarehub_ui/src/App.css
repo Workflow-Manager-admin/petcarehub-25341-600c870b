@@ -6,11 +6,12 @@
 /* ... (keep all the existing CSS above this block unchanged) ... */
 
 /*------------------ Button Styles (Updated for black text) ------------------*/
+/* --- Restore PetCareHub original button BG color (accent/orange) while keeping text black --- */
 .btn, button, input[type="submit"], .btn-glass {
   display: inline-flex;
   align-items: center;
   gap: 0.42em;
-  background: linear-gradient(102deg, var(--primary) 62%, var(--accent) 100%);
+  background: linear-gradient(95deg, var(--kavia-orange) 75%, var(--accent) 100%);
   color: #000 !important; /* Always black for button text */
   padding: 0.74em 2.13em;
   border-radius: var(--btn-radius);
