@@ -2,3 +2,27 @@
 > react-kavia@0.1.0 start
 > react-scripts start
 
+(node:597) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:597) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Failed to compile.
+
+Module not found: Error: Can't resolve './index.css' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src'
+ERROR in ./src/index.js 6:0-21
+Module not found: Error: Can't resolve './index.css' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src'
+
+ERROR in ./src/index.js 7:0-24
+Module not found: Error: Can't resolve './App' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src'
+
+ERROR in [eslint] No files matching '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' were found.
+
+webpack compiled with 3 errors
+Failed to compile.
+
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 1 error
