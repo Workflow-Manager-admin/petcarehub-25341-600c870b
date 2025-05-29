@@ -94,25 +94,11 @@ function PetList() {
         style={{ width: large ? 92 : 67, height: large ? 92 : 67, marginRight: large ? 0 : 9, marginBottom: large ? 12 : 7 }}
         aria-label="photo placeholder"
       >
-        <span className="pch-pet-photo-emoji" role="img" aria-label="pet">
-          {fallback}
-        </span>
       </div>
     );
   }
-
-  // Simple breed → emoji for fun fallback avatars
-  function breedToEmoji(breed = "") {
-    const b = breed.toLowerCase();
-    if (b.includes('cat')) return '🐱';
-    if (b.includes('bird')) return '🐦';
-    if (b.includes('parrot')) return '🦜';
-    if (b.includes('dog') || b.includes('lab')) return '🐶';
-    if (b.includes('hamster')) return '🐹';
-    if (b.includes('rabbit')) return '🐰';
-    if (b.includes('fish')) return '🐟';
-    return '🐾';
-  }
+  // No more breed → emoji fallback avatars
+  function breedToEmoji(breed = "") { return ""; }
 
   // Modal component
   function Modal({ show, children, title, onClose }) {

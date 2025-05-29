@@ -19,7 +19,7 @@ function MedicalRecords({
   // Section configs
   const sections = [
     {
-      key: 'history', icon: '🩺', label: 'Medical History',
+      key: 'history', icon: '', label: 'Medical History',
       fields: [
         { name: 'condition', label: 'Condition', type: 'text', required: true, max: 48 },
         { name: 'date', label: 'Date', type: 'date', required: true },
@@ -27,7 +27,7 @@ function MedicalRecords({
       ]
     },
     {
-      key: 'vaccinations', icon: '💉', label: 'Vaccinations',
+      key: 'vaccinations', icon: '', label: 'Vaccinations',
       fields: [
         { name: 'vaccine', label: 'Vaccine', type: 'text', required: true, max: 64 },
         { name: 'date', label: 'Date', type: 'date', required: true },
@@ -35,7 +35,7 @@ function MedicalRecords({
       ]
     },
     {
-      key: 'prescriptions', icon: '💊', label: 'Prescriptions',
+      key: 'prescriptions', icon: '', label: 'Prescriptions',
       fields: [
         { name: 'medicine', label: 'Medicine', type: 'text', required: true, max: 64 },
         { name: 'dosage', label: 'Dosage', type: 'text', required: true, max: 40 },
@@ -44,7 +44,7 @@ function MedicalRecords({
       ]
     },
     {
-      key: 'visits', icon: '🏥', label: 'Vet Visits',
+      key: 'visits', icon: '', label: 'Vet Visits',
       fields: [
         { name: 'reason', label: 'Reason', type: 'text', required: true, max: 64 },
         { name: 'date', label: 'Visit Date', type: 'date', required: true },
