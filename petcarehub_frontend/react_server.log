@@ -1041,3 +1041,11 @@ ERROR in main
 Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
 
 webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 1 error
