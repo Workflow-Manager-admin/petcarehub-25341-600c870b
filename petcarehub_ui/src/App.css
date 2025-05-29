@@ -2348,6 +2348,25 @@ a, .btn, button, input, select, textarea {
   margin-right: 0.31em; margin-bottom: 0.12em;
 }
 
+/* Custom for black background and orange text on badge */
+.badge-black-orange {
+  background: #19191a !important;
+  color: var(--kavia-orange, #E87A41) !important;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Custom for duration input, black bg, gray placeholder */
+.duration-input-black {
+  background: #111 !important;
+  color: #e2e2e2 !important;
+}
+/* Gray placeholder for black input */
+.duration-input-black::placeholder {
+  color: #bcbcbc !important;
+  opacity: 1 !important;
+}
+
 /* Duration input for activity log -- highly visible in all themes */
 .duration-input {
   background: #fff !important;

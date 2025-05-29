@@ -249,7 +249,7 @@ function ActivityPage() {
               display: "flex", gap: 16, alignItems: "center"
             }}>
               <span style={{minWidth:80, fontWeight:600, color:ACCENT}}>{item.activity}</span>
-              <span className="badge" style={{fontSize:"15px"}}>{item.duration} min</span>
+              <span className="badge badge-black-orange" style={{fontSize:"15px"}}>{item.duration} min</span>
               <span style={{fontSize:13, color:"#999"}}>{new Date(item.ts).toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}</span>
             </div>
           ))}
