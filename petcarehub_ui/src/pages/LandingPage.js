@@ -29,11 +29,11 @@ function LandingPage() {
     "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=facearea&w=900&q=80";
   const aboutIllustration =
     "/assets/illustrations/pet-wellness.svg";
-  // Use local illustrative SVGs for better reliability
+  // Use local illustrative PNGs for reliability
   const featureImgs = [
-    "/assets/illustrations/routines.png",   // Routine Tracker (provide in assets)
-    "/assets/illustrations/medical.png",    // Medical Vault (provide in assets)
-    "/assets/illustrations/reminders.png",  // Reminders (provide in assets)
+    "/assets/illustrations/routines.png",   // Routine Tracker
+    "/assets/illustrations/medical.png",    // Medical Vault
+    "/assets/illustrations/reminders.png",  // Reminders
   ];
   const pawIcon = "🐾";
   const heartIcon = "🧡";

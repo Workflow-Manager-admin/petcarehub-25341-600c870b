@@ -33,3 +33,4 @@ src/pages/LandingPage.js
   Line 39:9:  'heartIcon' is assigned a value but never used  no-unused-vars
 
 webpack compiled with 1 warning
+Compiling...
