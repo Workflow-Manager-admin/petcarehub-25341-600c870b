@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import "./HealthTracker.module.css";
 
 // PUBLIC_INTERFACE
 /**
