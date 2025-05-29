@@ -128,30 +128,42 @@ const NavigationBar = () => {
             onMouseEnter={() => handleMenuEnter("settings")}
             onMouseLeave={handleMenuLeave}
           >
-            <span className="nav-link dropdown-toggle">
+            <span
+              className="nav-link dropdown-toggle"
+              tabIndex={0}
+              aria-haspopup="true"
+              aria-expanded={openMenu === "settings"}
+            >
               Settings <span className="dropdown-caret">▼</span>
             </span>
             {openMenu === "settings" && (
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu" role="menu" aria-label="Settings dropdown">
                 <li>
-                  <NavLink to="/settings" className="dropdown-link">
+                  <NavLink to="/settings" className="dropdown-link" role="menuitem">
                     Settings Home
                   </NavLink>
                 </li>
+                {/* Support Sub-dropdown */}
                 <li
                   className="nav-subdropdown"
                   onMouseEnter={() => handleSubMenuEnter("settings", "support")}
                   onMouseLeave={() => handleSubMenuLeave("settings")}
                 >
-                  <span className="dropdown-link dropdown-toggle">
+                  <span
+                    className="dropdown-link dropdown-toggle"
+                    tabIndex={0}
+                    aria-haspopup="true"
+                    aria-expanded={openSubMenu.settings === "support"}
+                  >
                     Support <span className="dropdown-caret">▶</span>
                   </span>
                   {openSubMenu.settings === "support" && (
-                    <ul className="dropdown-submenu">
+                    <ul className="dropdown-submenu" role="menu" aria-label="Support submenu">
                       <li>
                         <NavLink
                           to="/settings/support/contact"
                           className="dropdown-link"
+                          role="menuitem"
                         >
                           Contact / Help
                         </NavLink>
@@ -160,6 +172,7 @@ const NavigationBar = () => {
                         <NavLink
                           to="/settings/support/about"
                           className="dropdown-link"
+                          role="menuitem"
                         >
                           About &amp; Privacy
                         </NavLink>
@@ -167,23 +180,29 @@ const NavigationBar = () => {
                     </ul>
                   )}
                 </li>
+                {/* Account Sub-dropdown */}
                 <li
                   className="nav-subdropdown"
                   onMouseEnter={() => handleSubMenuEnter("settings", "account")}
                   onMouseLeave={() => handleSubMenuLeave("settings")}
                 >
-                  <span className="dropdown-link dropdown-toggle">
+                  <span
+                    className="dropdown-link dropdown-toggle"
+                    tabIndex={0}
+                    aria-haspopup="true"
+                    aria-expanded={openSubMenu.settings === "account"}
+                  >
                     Account <span className="dropdown-caret">▶</span>
                   </span>
                   {openSubMenu.settings === "account" && (
-                    <ul className="dropdown-submenu">
+                    <ul className="dropdown-submenu" role="menu" aria-label="Account submenu">
                       <li>
-                        <NavLink to="/login" className="dropdown-link">
+                        <NavLink to="/login" className="dropdown-link" role="menuitem">
                           Login
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/signup" className="dropdown-link">
+                        <NavLink to="/signup" className="dropdown-link" role="menuitem">
                           Sign Up
                         </NavLink>
                       </li>
