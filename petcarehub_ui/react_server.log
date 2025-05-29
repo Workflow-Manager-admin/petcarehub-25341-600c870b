@@ -2,40 +2,81 @@
 > react-kavia@0.1.0 start
 > react-scripts start
 
-(node:10724) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:10972) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:10724) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:10972) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
-Compiled successfully!
-
-You can now view react-kavia in the browser.
-
-  Local:            http://localhost:3000
-  On Your Network:  http://172.17.0.2:3000
-
-Note that the development build is not optimized.
-To create a production build, use npm run build.
-
-webpack compiled successfully
-Compiling...
-Compiled with warnings.
+Failed to compile.
 
 [eslint] 
 src/pages/ManageAppointmentsPage.js
-  Line 32:19:  'setHistory' is assigned a value but never used          no-unused-vars
-  Line 53:10:  'showUpload' is assigned a value but never used          no-unused-vars
-  Line 53:22:  'setShowUpload' is assigned a value but never used       no-unused-vars
-  Line 106:9:  'handleFilterChange' is assigned a value but never used  no-unused-vars
+Syntax error: Unexpected token, expected "," (164:20) (164:20)
+ERROR in ./src/pages/ManageAppointmentsPage.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/src/pages/ManageAppointmentsPage.js: Unexpected token, expected "," (164:20)
 
-Search for the keywords to learn more about each warning.
-To ignore, add // eslint-disable-next-line to the line before.
+  162 |       minHeight: '100vh',
+  163 |       background: 'linear-gradient(132deg, #e2dda6 0%, #879d85 40%, #656461 100%)',
+> 164 |       fontFamily: ''Inter', sans-serif',
+      |                     ^
+  165 |       padding: '0',
+  166 |       overflowX: 'hidden',
+  167 |     }}>
+    at constructor (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowParserMixin.unexpected (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:3347:16)
+    at FlowParserMixin.expect (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:3657:12)
+    at FlowParserMixin.parseObjectLike (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:11506:14)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:11024:23)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10758:23)
+    at FlowParserMixin.parseUpdate (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10743:21)
+    at FlowParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10723:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10576:61)
+    at FlowParserMixin.parseExprOps (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10581:23)
+    at FlowParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10558:23)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10521:21)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseExpressionBase (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10475:23)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10471:39
+    at FlowParserMixin.allowInAnd (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:12100:12)
+    at FlowParserMixin.parseExpression (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10471:17)
+    at FlowParserMixin.jsxParseExpressionContainer (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6805:31)
+    at FlowParserMixin.jsxParseAttributeValue (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6777:21)
+    at FlowParserMixin.jsxParseAttribute (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6826:38)
+    at FlowParserMixin.jsxParseOpeningElementAfterName (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6840:28)
+    at FlowParserMixin.jsxParseOpeningElementAfterName (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6292:18)
+    at FlowParserMixin.jsxParseOpeningElementAt (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6835:17)
+    at FlowParserMixin.jsxParseElementAt (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6859:33)
+    at FlowParserMixin.jsxParseElement (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6922:17)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6932:19)
+    at FlowParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10758:23)
+    at FlowParserMixin.parseUpdate (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10743:21)
+    at FlowParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10723:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10576:61)
+    at FlowParserMixin.parseExprOps (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10581:23)
+    at FlowParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10558:23)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10521:21)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:5722:39
+    at FlowParserMixin.tryParse (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:3665:20)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:5722:18)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10491:39
+    at FlowParserMixin.allowInAnd (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:12100:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10491:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:11359:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:5815:18)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:11006:23)
+    at FlowParserMixin.parseExprAtom (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10758:23)
+    at FlowParserMixin.parseUpdate (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10743:21)
+    at FlowParserMixin.parseMaybeUnary (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10723:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10576:61)
+    at FlowParserMixin.parseExprOps (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/node_modules/@babel/parser/lib/index.js:10581:23)
 
-WARNING in [eslint] 
+ERROR in [eslint] 
 src/pages/ManageAppointmentsPage.js
-  Line 32:19:  'setHistory' is assigned a value but never used          no-unused-vars
-  Line 53:10:  'showUpload' is assigned a value but never used          no-unused-vars
-  Line 53:22:  'setShowUpload' is assigned a value but never used       no-unused-vars
-  Line 106:9:  'handleFilterChange' is assigned a value but never used  no-unused-vars
+  Line 164:20:  Parsing error: Unexpected token, expected "," (164:20)
 
-webpack compiled with 1 warning
+webpack compiled with 2 errors
+Compiling...
