@@ -93,6 +93,56 @@
   position: relative;
 }
 
+/* For keyboard accessibility: focus outline and highlight */
+.dropdown-link:focus, .dropdown-toggle:focus {
+  outline: 2px solid #879d85;
+  background: #e2dda6 !important;
+  color: #656461 !important;
+}
+
+/* Enables submenu to stay open on hover or focus */
+.nav-subdropdown:focus-within > .dropdown-submenu,
+.nav-subdropdown:hover > .dropdown-submenu {
+  display: block;
+  pointer-events: auto;
+}
+
+.dropdown-submenu {
+  /* Remain as before, but set display none by default for keyboard navigation flow */
+  display: none;
+}
+.nav-subdropdown:hover > .dropdown-submenu,
+.nav-subdropdown:focus-within > .dropdown-submenu {
+  display: block;
+}
+
+/* Submenu arrow adjustment for clarity */
+.dropdown-link.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Accessible :hover/:focus states for entire submenu area */
+.nav-subdropdown:focus-within > .dropdown-link,
+.nav-subdropdown:hover > .dropdown-link {
+  background: #e2dda6;
+  color: #656461 !important;
+}
+
+/* Slight padding for submenu overlap safety */
+.dropdown-submenu {
+  top: 0;
+  left: 210px;
+  min-width: 180px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(135,157,133,0.22);
+  border-radius: 5px;
+  padding: 0.42rem 0;
+  z-index: 220;
+  margin-left: 1px;
+}
+
 .dropdown-link {
   display: block;
   padding: 0.65rem 1.2rem;
