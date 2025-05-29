@@ -17,7 +17,7 @@ function SettingsPage() {
 
   return (
     <div className="pch-widget" tabIndex={0} style={{margin: 'auto', maxWidth: 600, minWidth: 260, textAlign: 'center', padding: '2em 0'}}>
-      <div style={{fontSize: '2.5em', marginBottom: 8}} role="img" aria-label="settings">⚙️</div>
+      <div style={{fontSize: '2.5em', marginBottom: 8}} role="img" aria-label="settings"></div>
       <h2 style={{marginBottom: subLabel ? '0.7em' : '0'}}>Settings</h2>
       {subLabel && (
         <div style={{fontSize: '1.2em', color: 'var(--kavia-orange)', fontWeight: 600, marginBottom: 18}}>
