@@ -17,6 +17,7 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import PetProfilePage from './pages/PetProfilePage';
 import HealthTrackerPage from './pages/HealthTrackerPage'; // ADDED IMPORT
+import DietNutritionPage from './pages/DietNutritionPage';
 
 /**
  * PUBLIC_INTERFACE
@@ -136,7 +137,9 @@ function MainContainer() {
               setMedicalRecords={handleMedicalChange}
             />
           } />
-          <Route path="/diet" element={<div>Diet & Nutrition Placeholder</div>} />
+          <Route path="/diet" element={
+            <DietNutritionPage />
+          } />
           <Route path="/activity" element={<div>Activity Placeholder</div>} />
           <Route path="/appointments" element={<div>Appointment Manager Placeholder</div>} />
           <Route path="/notes" element={<div>Notes / Documents Placeholder</div>} />
