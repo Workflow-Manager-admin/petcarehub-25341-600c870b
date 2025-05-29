@@ -71,7 +71,6 @@ label, .form-label, .form-group label {
 
 /* App background overrides */
 .app {
-  background: #f7f8fa !important;
   min-height: 100vh;
 }
 
