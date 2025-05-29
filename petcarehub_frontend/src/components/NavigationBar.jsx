@@ -43,11 +43,11 @@ const NavigationBar = () => {
   const handleSubMenuLeave = (menu) =>
     setOpenSubMenu((prev) => ({ ...prev, [menu]: null }));
 
-  // Logo and title link
+  // Logo and title link with slight style for flex
   const logo = (
     <Link to="/" className="nav-logo">
       <span role="img" aria-label="PetCareHub logo" className="pet-logo">
-        🐾
+        <MdPets />
       </span>
       <span className="nav-title">PetCareHub</span>
     </Link>
@@ -57,7 +57,6 @@ const NavigationBar = () => {
     <nav className="navbar">
       <div className="navbar-content">
         {logo}
-
         <ul className="nav-menu">
           <li>
             <NavLink
@@ -66,10 +65,11 @@ const NavigationBar = () => {
                 isActive ? "nav-link active" : "nav-link"
               }
             >
-              Dashboard
+              <span className="nav-icon-lbl">
+                <FaTachometerAlt className="nav-item-icon" /> Dashboard
+              </span>
             </NavLink>
           </li>
-
           {/* My Pets Dropdown */}
           <li
             className="nav-dropdown"
@@ -77,34 +77,44 @@ const NavigationBar = () => {
             onMouseLeave={handleMenuLeave}
           >
             <span className="nav-link dropdown-toggle">
-              My Pets <span className="dropdown-caret">▼</span>
+              <span className="nav-icon-lbl">
+                <MdPets className="nav-item-icon" /> My Pets
+              </span>
+              <span className="dropdown-caret">▼</span>
             </span>
             {openMenu === "mypets" && (
               <ul className="dropdown-menu">
                 <li>
                   <NavLink to="/mypets/profile" className="dropdown-link">
-                    Profile
+                    <span className="nav-icon-lbl">
+                      <FaRegIdBadge className="nav-item-icon" /> Profile
+                    </span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/mypets/health" className="dropdown-link">
-                    Health Tracker
+                    <span className="nav-icon-lbl">
+                      <MdOutlineVaccines className="nav-item-icon" /> Health Tracker
+                    </span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/mypets/nutrition" className="dropdown-link">
-                    Diet &amp; Nutrition
+                    <span className="nav-icon-lbl">
+                      <MdOutlineFastfood className="nav-item-icon" /> Diet &amp; Nutrition
+                    </span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/mypets/activity" className="dropdown-link">
-                    Activity
+                    <span className="nav-icon-lbl">
+                      <MdOutlineDirectionsRun className="nav-item-icon" /> Activity
+                    </span>
                   </NavLink>
                 </li>
               </ul>
             )}
           </li>
-
           {/* Appointments Dropdown */}
           <li
             className="nav-dropdown"
@@ -112,24 +122,30 @@ const NavigationBar = () => {
             onMouseLeave={handleMenuLeave}
           >
             <span className="nav-link dropdown-toggle">
-              Appointments <span className="dropdown-caret">▼</span>
+              <span className="nav-icon-lbl">
+                <FaCalendarAlt className="nav-item-icon" /> Appointments
+              </span>
+              <span className="dropdown-caret">▼</span>
             </span>
             {openMenu === "appointments" && (
               <ul className="dropdown-menu">
                 <li>
                   <NavLink to="/appointments/manage" className="dropdown-link">
-                    Manage
+                    <span className="nav-icon-lbl">
+                      <FaCog className="nav-item-icon" /> Manage
+                    </span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/appointments/notes" className="dropdown-link">
-                    Notes/Documents
+                    <span className="nav-icon-lbl">
+                      <FaFileAlt className="nav-item-icon" /> Notes/Documents
+                    </span>
                   </NavLink>
                 </li>
               </ul>
             )}
           </li>
-
           <li>
             <NavLink
               to="/notifications"
@@ -137,10 +153,11 @@ const NavigationBar = () => {
                 isActive ? "nav-link active" : "nav-link"
               }
             >
-              Notifications
+              <span className="nav-icon-lbl">
+                <FaBell className="nav-item-icon" /> Notifications
+              </span>
             </NavLink>
           </li>
-
           {/* Settings Dropdown: Multi-level */}
           <li
             className="nav-dropdown"
@@ -153,13 +170,19 @@ const NavigationBar = () => {
               aria-haspopup="true"
               aria-expanded={openMenu === "settings"}
             >
-              Settings <span className="dropdown-caret">▼</span>
+              <span className="nav-icon-lbl">
+                <FaCog className="nav-item-icon" /> Settings
+              </span>
+              <span className="dropdown-caret">▼</span>
             </span>
             {openMenu === "settings" && (
               <ul className="dropdown-menu" role="menu" aria-label="Settings dropdown">
                 <li>
                   <NavLink to="/settings" className="dropdown-link" role="menuitem">
-                    Settings Home
+                    <span className="nav-icon-lbl">
+                      <FaHome className="nav-item-icon" />
+                      Settings Home
+                    </span>
                   </NavLink>
                 </li>
                 {/* Support Sub-dropdown */}
@@ -174,7 +197,10 @@ const NavigationBar = () => {
                     aria-haspopup="true"
                     aria-expanded={openSubMenu.settings === "support"}
                   >
-                    Support <span className="dropdown-caret">▶</span>
+                    <span className="nav-icon-lbl">
+                      <FaLifeRing className="nav-item-icon" /> Support
+                    </span>
+                    <span className="dropdown-caret">▶</span>
                   </span>
                   {openSubMenu.settings === "support" && (
                     <ul className="dropdown-submenu" role="menu" aria-label="Support submenu">
@@ -184,7 +210,9 @@ const NavigationBar = () => {
                           className="dropdown-link"
                           role="menuitem"
                         >
-                          Contact / Help
+                          <span className="nav-icon-lbl">
+                            <FaUserCog className="nav-item-icon" /> Contact / Help
+                          </span>
                         </NavLink>
                       </li>
                       <li>
@@ -193,7 +221,9 @@ const NavigationBar = () => {
                           className="dropdown-link"
                           role="menuitem"
                         >
-                          About &amp; Privacy
+                          <span className="nav-icon-lbl">
+                            <FaFileAlt className="nav-item-icon" /> About &amp; Privacy
+                          </span>
                         </NavLink>
                       </li>
                     </ul>
@@ -211,18 +241,25 @@ const NavigationBar = () => {
                     aria-haspopup="true"
                     aria-expanded={openSubMenu.settings === "account"}
                   >
-                    Account <span className="dropdown-caret">▶</span>
+                    <span className="nav-icon-lbl">
+                      <FaUserCircle className="nav-item-icon" /> Account
+                    </span>
+                    <span className="dropdown-caret">▶</span>
                   </span>
                   {openSubMenu.settings === "account" && (
                     <ul className="dropdown-submenu" role="menu" aria-label="Account submenu">
                       <li>
                         <NavLink to="/login" className="dropdown-link" role="menuitem">
-                          Login
+                          <span className="nav-icon-lbl">
+                            <FaSignInAlt className="nav-item-icon" /> Login
+                          </span>
                         </NavLink>
                       </li>
                       <li>
                         <NavLink to="/signup" className="dropdown-link" role="menuitem">
-                          Sign Up
+                          <span className="nav-icon-lbl">
+                            <FaUserPlus className="nav-item-icon" /> Sign Up
+                          </span>
                         </NavLink>
                       </li>
                     </ul>
