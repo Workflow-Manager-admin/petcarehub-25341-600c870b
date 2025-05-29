@@ -789,8 +789,21 @@ function PetProfilePage() {
 }
 
 
-// ---- InfoRow Component (for basic info fields) ----
-function InfoRow({ icon, label, value, editable, type, field, editingField, onStartEdit, onEdit }) {
+/*
+ * InfoRow Component:
+ * Used for fields in the basic information card. When editMode is true, displays as input field. When false, shows as text.
+ * Props:
+ * - icon, label, value (raw or display), type, editMode (bool), onValueChange, forceRawValue (optional: disables 'yrs' suffix for numeric fields in edit).
+ */
+function InfoRow({
+  icon,
+  label,
+  value,
+  type = "text",
+  editMode = false,
+  onValueChange,
+  forceRawValue
+}) {
   const [inputValue, setInputValue] = useState(value);
 
   React.useEffect(() => {
@@ -802,7 +815,7 @@ function InfoRow({ icon, label, value, editable, type, field, editingField, onSt
       <span style={{ marginRight: 10, color: "var(--accent)", fontSize: "1.1em" }}>{icon}</span>
       <span style={{ minWidth: 64, fontWeight: 500, color: "#656461" }}>{label}:</span>
       <span style={{ marginLeft: 7, flex: 1, fontSize: "1.04em", color: "#1A1A1A" }}>
-        {editingField === field ? (
+        {editMode ? (
           <input
             type={type || "text"}
             style={{
@@ -818,24 +831,14 @@ function InfoRow({ icon, label, value, editable, type, field, editingField, onSt
             value={inputValue}
             autoFocus
             maxLength={32}
-            onChange={e => setInputValue(e.target.value)}
-            onBlur={() => onEdit(inputValue)}
-            onKeyDown={e => e.key === "Enter" && onEdit(inputValue)}
+            onChange={e => {
+              setInputValue(e.target.value);
+              if (onValueChange) onValueChange(e.target.value);
+            }}
           />
         ) : (
-          <span>{value}
-            {editable &&
-              <button
-                className="btn btn-glass"
-                style={{
-                  marginLeft: 11, fontSize: "0.92em",
-                  padding: "5px 9px",
-                  background: "#fafdfe",
-                  color: "#656461"
-                }}
-                onClick={onStartEdit}
-                aria-label={`Edit ${label}`}
-              >Edit</button>}
+          <span>
+            {(!forceRawValue && label === "Age" && typeof value === "number") ? value + " yrs" : value}
           </span>
         )}
       </span>
