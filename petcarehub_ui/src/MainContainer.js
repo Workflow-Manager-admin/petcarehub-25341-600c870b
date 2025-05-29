@@ -8,12 +8,12 @@ import RoutineTracker from './components/RoutineTracker';
 import MedicalRecords from './components/MedicalRecords';
 import Reminders from './components/Reminders';
 import Settings from './components/Settings';
-// Import the newly nested pages
 import SettingsPage from './pages/SettingsPage';
 import ContactHelp from './pages/ContactHelp';
 import AboutPrivacy from './pages/AboutPrivacy';
 import Login from './pages/Auth/Login';
 import Signup from './pages/Auth/Signup';
+import LandingPage from './pages/LandingPage';
 
 /**
  * PUBLIC_INTERFACE
@@ -82,7 +82,7 @@ function MainContainer() {
       <Navigation />
       <main className="pch-main-content">
         <Routes>
-          <Route path="/" element={<>Welcome to PetCareHub! Dashboard quick links go here.</>} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={
             <>
              <header className="pch-main-header">
