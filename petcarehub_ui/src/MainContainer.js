@@ -84,22 +84,17 @@ function MainContainer() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={
-            <>
-             <header className="pch-main-header">
-               <h1>
-                 Welcome to PetCareHub
-               </h1>
-               <p className="pch-main-subtitle">Your modern pet parenting dashboard</p>
-             </header>
-             <section className="pch-widget-section" aria-label="All Pets Section">
-               <PetList
-                 pets={pets}
-                 setPets={handlePetsChange}
-                 selectedPetId={selectedPetId}
-                 setSelectedPetId={setSelectedPetId}
-               />
-             </section>
-            </>
+            <Dashboard
+              pets={pets}
+              reminders={reminders}
+              selectedPetId={selectedPetId}
+              setSelectedPetId={setSelectedPetId}
+              medicalRecords={medicalRecords}
+              onAddReminder={handleAddReminder}
+              onEditReminder={handleEditReminder}
+              onDeleteReminder={handleDeleteReminder}
+              onToggleDoneReminder={handleToggleDoneReminder}
+            />
           } />
           <Route path="/pets" element={
             <PetList
