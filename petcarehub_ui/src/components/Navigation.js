@@ -137,7 +137,6 @@ function Navigation() {
     <nav className="pch-navbar sticky" aria-label="Site main navigation">
       <div className="pch-navbar-container">
         <NavLink to="/" className="pch-navbar-logo" aria-label="PetCareHub Home">
-          <span role="img" aria-label="paw" className="pch-logo-icon">🐾</span>
           <span className="pch-logo-title">PetCareHub</span>
         </NavLink>
         <ul className="pch-navbar-links">
