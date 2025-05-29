@@ -19,6 +19,7 @@ import PetProfilePage from './pages/PetProfilePage';
 import HealthTrackerPage from './pages/HealthTrackerPage'; // ADDED IMPORT
 import DietNutritionPage from './pages/DietNutritionPage';
 import ActivityPage from './pages/ActivityPage';
+import ManageAppointmentsPage from './pages/ManageAppointmentsPage';
 /**
  * PUBLIC_INTERFACE
  * MainContainer is the primary layout wrapper for PetCareHub's dashboard zone.
@@ -142,6 +143,7 @@ function MainContainer() {
           } />
           <Route path="/activity" element={<ActivityPage />} />
           <Route path="/appointments" element={<div>Appointment Manager Placeholder</div>} />
+          <Route path="/appointments/manage" element={<ManageAppointmentsPage />} />
           <Route path="/notes" element={<div>Notes / Documents Placeholder</div>} />
           <Route path="/notifications" element={
             <Reminders

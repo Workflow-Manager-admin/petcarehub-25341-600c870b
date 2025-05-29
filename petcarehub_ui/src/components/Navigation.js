@@ -30,7 +30,7 @@ function Navigation() {
       icon: '',
       to: '/appointments',
       dropdown: [
-        { label: 'Manage', to: '/appointments' },
+        { label: 'Manage', to: '/appointments/manage' },
         { label: 'Notes / Documents', to: '/notes' },
       ]
     },
