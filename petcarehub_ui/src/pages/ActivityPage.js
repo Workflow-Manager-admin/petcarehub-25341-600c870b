@@ -247,9 +247,10 @@ function ActivityPage() {
               <span className="badge badge-black-orange" style={{fontSize:"15px"}}>{item.duration} min</span>
               <span style={{
                 fontSize: 13,
-                color: "var(--text-secondary, #999)"
+                color: "var(--kavia-orange, #E87A41)",
+                fontWeight: 600
               }}>
-                {new Date(item.ts).toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}
+                {new Date(item.ts).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
               </span>
             </div>
           ))}
