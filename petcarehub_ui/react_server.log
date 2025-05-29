@@ -93,3 +93,4 @@ ERROR in ./src/pages/ManageAppointmentsPage.js 5:0-57
 Module not found: Error: Can't resolve './ManageAppointmentsPage.module.css' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/src/pages'
 
 webpack compiled with 1 error
+Compiling...
