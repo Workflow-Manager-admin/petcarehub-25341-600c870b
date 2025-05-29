@@ -16,6 +16,7 @@ import Signup from './pages/Auth/Signup';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import PetProfilePage from './pages/PetProfilePage';
+import HealthTrackerPage from './pages/HealthTrackerPage'; // ADDED IMPORT
 
 /**
  * PUBLIC_INTERFACE
@@ -116,6 +117,15 @@ function MainContainer() {
                 setMedicalRecords={handleMedicalChange}
               />
             </React.Suspense>
+          } />
+          <Route path="/health-tracker" element={
+            <HealthTrackerPage
+              pets={pets}
+              selectedPetId={selectedPetId}
+              setSelectedPetId={setSelectedPetId}
+              medicalRecords={medicalRecords}
+              setMedicalRecords={handleMedicalChange}
+            />
           } />
           <Route path="/health" element={
             <MedicalRecords
