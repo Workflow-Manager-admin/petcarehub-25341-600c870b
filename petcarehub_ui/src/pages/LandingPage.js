@@ -28,11 +28,12 @@ function LandingPage() {
   const petHero =
     "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=facearea&w=900&q=80";
   const aboutIllustration =
-    "https://assets-global.website-files.com/642c6da5e1ce16ea560798ac/644a613cc73843bf5e81631d_pet-wellness.svg";
+    "/assets/illustrations/pet-wellness.svg";
+  // Use local illustrative SVGs for better reliability
   const featureImgs = [
-    "https://cdn.pixabay.com/photo/2017/09/25/13/12/dachshund-2785074_1280.jpg",
-    "https://cdn.pixabay.com/photo/2016/09/05/20/38/adorable-1641868_1280.jpg",
-    "https://cdn.pixabay.com/photo/2016/02/19/10/00/animal-1209955_1280.jpg",
+    "/assets/illustrations/routines.png",   // Routine Tracker (provide in assets)
+    "/assets/illustrations/medical.png",    // Medical Vault (provide in assets)
+    "/assets/illustrations/reminders.png",  // Reminders (provide in assets)
   ];
   const pawIcon = "🐾";
   const heartIcon = "🧡";
