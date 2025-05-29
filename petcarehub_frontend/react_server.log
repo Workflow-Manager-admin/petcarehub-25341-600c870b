@@ -82,3 +82,954 @@ ERROR in main
 Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
 
 webpack compiled with 1 error
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 8 hidden lines
+
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+ERROR in ./node_modules/core-js-pure/features/global-this.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/features/global-this.js'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 15 hidden lines
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Child compilation failed:
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin/lib/loader.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ModuleNotFoundError: Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin/lib/loader.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/Compilation.js:2123:28
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:923:13
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:339:22
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:520:22
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:155:10
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:745:23
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/neo-async/async.js:2830:7
+    at done (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/neo-async/async.js:2925:13)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:1192:23
+    at finishWithoutResolve (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:567:11)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:656:15
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+
+1 ERROR in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
+webpack compiled with 6 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/babel-loader/package.json (directory description file): Error: No file content
+ERROR in Module not found: Error: /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/babel-loader/package.json (directory description file): Error: No file content
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Child compilation failed:
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin/lib/loader.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ModuleNotFoundError: Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin/lib/loader.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/Compilation.js:2123:28
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:923:13
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:339:22
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:520:22
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:155:10
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:745:23
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/neo-async/async.js:2830:7
+    at done (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/neo-async/async.js:2925:13)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:1192:23
+    at finishWithoutResolve (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:567:11)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:656:15
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: SyntaxError: /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/babel-loader/package.json (directory description file): SyntaxError: Unexpected end of JSON input
+
+ERROR in Child compilation failed:
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin/lib/loader.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ModuleNotFoundError: Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin/lib/loader.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/Compilation.js:2123:28
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:923:13
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:339:22
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:520:22
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:155:10
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:745:23
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/neo-async/async.js:2830:7
+    at done (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/neo-async/async.js:2925:13)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/lib/NormalModuleFactory.js:1192:23
+    at finishWithoutResolve (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:567:11)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:656:15
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5
+    at eval (eval at create (/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
+    at /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/enhanced-resolve/lib/DirectoryExistsPlugin.js:41:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/html-webpack-plugin isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 15 hidden lines
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 54:0-43
+Module not found: Error: Can't resolve './utils/parseURL.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 55:0-33
+Module not found: Error: Can't resolve './socket.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 56:0-60
+Module not found: Error: Can't resolve './overlay.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 57:0-70
+Module not found: Error: Can't resolve './utils/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 58:0-49
+Module not found: Error: Can't resolve './utils/sendMessage.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 59:0-45
+Module not found: Error: Can't resolve './utils/reloadApp.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 11 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 54:0-43
+Module not found: Error: Can't resolve './utils/parseURL.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 55:0-33
+Module not found: Error: Can't resolve './socket.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 56:0-60
+Module not found: Error: Can't resolve './overlay.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 57:0-70
+Module not found: Error: Can't resolve './utils/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 58:0-49
+Module not found: Error: Can't resolve './utils/sendMessage.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 59:0-45
+Module not found: Error: Can't resolve './utils/reloadApp.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 11 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 54:0-43
+Module not found: Error: Can't resolve './utils/parseURL.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 55:0-33
+Module not found: Error: Can't resolve './socket.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 56:0-60
+Module not found: Error: Can't resolve './overlay.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 58:0-49
+Module not found: Error: Can't resolve './utils/sendMessage.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 59:0-45
+Module not found: Error: Can't resolve './utils/reloadApp.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 10 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 55:0-33
+Module not found: Error: Can't resolve './socket.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 58:0-49
+Module not found: Error: Can't resolve './utils/sendMessage.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 59:0-45
+Module not found: Error: Can't resolve './utils/reloadApp.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 55:0-114
+Module not found: Error: Can't resolve './overlay/runtime-error.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 56:0-62
+Module not found: Error: Can't resolve './overlay/state-machine.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 57:0-138
+Module not found: Error: Can't resolve './overlay/styles.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 11 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 55:0-33
+Module not found: Error: Can't resolve './socket.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 56:0-62
+Module not found: Error: Can't resolve './overlay/state-machine.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 57:0-138
+Module not found: Error: Can't resolve './overlay/styles.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 9 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 56:0-62
+Module not found: Error: Can't resolve './overlay/state-machine.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 57:0-138
+Module not found: Error: Can't resolve './overlay/styles.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/socket.js 3:0-59
+Module not found: Error: Can't resolve './clients/WebSocketClient.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/socket.js 10:7-36
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/clients/WebSocketClient.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in ./node_modules/webpack-dev-server/client/socket.js
+Cannot read properties of undefined (reading 'module')
+
+webpack compiled with 11 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 53:0-45
+Module not found: Error: Can't resolve './utils/stripAnsi.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/overlay.js 57:0-138
+Module not found: Error: Can't resolve './overlay/styles.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/socket.js 3:0-59
+Module not found: Error: Can't resolve './clients/WebSocketClient.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/socket.js 10:7-36
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/clients/WebSocketClient.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in ./node_modules/webpack-dev-server/client/socket.js
+Cannot read properties of undefined (reading 'module')
+
+webpack compiled with 10 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot/dev-server.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 12:12-28
+Module not found: Error: Can't resolve './log' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 26:6-35
+Module not found: Error: Can't resolve './log-apply-result' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 43:19-39
+Module not found: Error: Can't resolve './emitter' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 7 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack-dev-server/client/utils/reloadApp.js 1:0-48
+Module not found: Error: Can't resolve 'webpack/hot/emitter.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client/utils'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 12:12-28
+Module not found: Error: Can't resolve './log' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 26:6-35
+Module not found: Error: Can't resolve './log-apply-result' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 43:19-39
+Module not found: Error: Can't resolve './emitter' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 7 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true 52:0-47
+Module not found: Error: Can't resolve 'webpack/hot/log.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack-dev-server/client'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 12:12-28
+Module not found: Error: Can't resolve './log' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/webpack/hot/dev-server.js 26:6-35
+Module not found: Error: Can't resolve './log-apply-result' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/webpack/hot'
+
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js 3:17-61
+Module not found: Error: Can't resolve 'core-js-pure/features/global-this' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/@pmmmwh/react-refresh-webpack-plugin/client'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/is-callable' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 19 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 3:17-52
+Module not found: Error: Can't resolve '../internals/is-callable' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/create-non-enumerable-property.js 4:27-73
+Module not found: Error: Can't resolve '../internals/object-define-property' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 6:17-52
+Module not found: Error: Can't resolve '../internals/is-callable' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 7:31-91
+Module not found: Error: Can't resolve '../internals/object-get-own-property-descriptor' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 8:15-48
+Module not found: Error: Can't resolve '../internals/is-forced' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 9:11-39
+Module not found: Error: Can't resolve '../internals/path' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 14:0-36
+Module not found: Error: Can't resolve '../internals/shared-store' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 10 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/is-callable' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 11 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 3:17-52
+Module not found: Error: Can't resolve '../internals/is-callable' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/create-non-enumerable-property.js 4:27-73
+Module not found: Error: Can't resolve '../internals/object-define-property' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 6:17-52
+Module not found: Error: Can't resolve '../internals/is-callable' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 7:31-91
+Module not found: Error: Can't resolve '../internals/object-get-own-property-descriptor' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 8:15-48
+Module not found: Error: Can't resolve '../internals/is-forced' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 9:11-39
+Module not found: Error: Can't resolve '../internals/path' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 14:0-36
+Module not found: Error: Can't resolve '../internals/shared-store' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 10 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/create-non-enumerable-property.js 4:27-73
+Module not found: Error: Can't resolve '../internals/object-define-property' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 7:31-91
+Module not found: Error: Can't resolve '../internals/object-get-own-property-descriptor' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 8:15-48
+Module not found: Error: Can't resolve '../internals/is-forced' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 9:11-39
+Module not found: Error: Can't resolve '../internals/path' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 14:0-36
+Module not found: Error: Can't resolve '../internals/shared-store' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 8 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/create-non-enumerable-property.js 4:27-73
+Module not found: Error: Can't resolve '../internals/object-define-property' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 7:31-91
+Module not found: Error: Can't resolve '../internals/object-get-own-property-descriptor' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 9:11-39
+Module not found: Error: Can't resolve '../internals/path' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 14:0-36
+Module not found: Error: Can't resolve '../internals/shared-store' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 7 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 9:11-39
+Module not found: Error: Can't resolve '../internals/path' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/export.js 14:0-36
+Module not found: Error: Can't resolve '../internals/shared-store' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 5:30-77
+Module not found: Error: Can't resolve '../internals/v8-prototype-define-bug' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 7:20-59
+Module not found: Error: Can't resolve '../internals/to-property-key' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-get-own-property-descriptor.js 7:22-63
+Module not found: Error: Can't resolve '../internals/to-indexed-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-get-own-property-descriptor.js 8:20-59
+Module not found: Error: Can't resolve '../internals/to-property-key' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 9 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 15 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 5:30-77
+Module not found: Error: Can't resolve '../internals/v8-prototype-define-bug' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 7:20-59
+Module not found: Error: Can't resolve '../internals/to-property-key' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-get-own-property-descriptor.js 7:22-63
+Module not found: Error: Can't resolve '../internals/to-indexed-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-get-own-property-descriptor.js 8:20-59
+Module not found: Error: Can't resolve '../internals/to-property-key' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 7 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/has-own-property.js 4:15-48
+Module not found: Error: Can't resolve '../internals/to-object' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 5:30-77
+Module not found: Error: Can't resolve '../internals/v8-prototype-define-bug' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 7:20-59
+Module not found: Error: Can't resolve '../internals/to-property-key' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-get-own-property-descriptor.js 8:20-59
+Module not found: Error: Can't resolve '../internals/to-property-key' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 6 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/a-callable.js 4:18-55
+Module not found: Error: Can't resolve '../internals/try-to-string' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/is-symbol.js 6:24-65
+Module not found: Error: Can't resolve '../internals/use-symbol-as-uid' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 5:30-77
+Module not found: Error: Can't resolve '../internals/v8-prototype-define-bug' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/to-primitive.js 8:22-63
+Module not found: Error: Can't resolve '../internals/well-known-symbol' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 5 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/use-symbol-as-uid' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/is-symbol.js 6:24-65
+Module not found: Error: Can't resolve '../internals/use-symbol-as-uid' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/object-define-property.js 5:30-77
+Module not found: Error: Can't resolve '../internals/v8-prototype-define-bug' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in ./node_modules/core-js-pure/internals/to-primitive.js 8:22-63
+Module not found: Error: Can't resolve '../internals/well-known-symbol' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 4 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../internals/well-known-symbol' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+ERROR in ./node_modules/core-js-pure/internals/to-primitive.js 8:22-63
+Module not found: Error: Can't resolve '../internals/well-known-symbol' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/node_modules/core-js-pure/internals'
+
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+ERROR in main
+Module not found: Error: Can't resolve '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend/src/index.js' in '/home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_frontend'
+
+webpack compiled with 1 error
