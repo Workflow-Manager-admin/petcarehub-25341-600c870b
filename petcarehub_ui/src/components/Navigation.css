@@ -165,12 +165,14 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
 /* NESTED DROPDOWN (support for Settings > Support/Account levels) */
 .pch-navbar-dropdown-level1 {
   position: relative;
-  /* NOTE: To make the sub-navigation appear LEFT, see menu styles below. */
+  /* NOTE: SUB-NAVIGATION for Settings now opens to the LEFT of its parent (see below). */
 }
 
+/* --- Settings sub-menu opens left: override to right-aligned --- */
 .pch-navbar-dropdown-level1 > .pch-dropdown-menu {
   position: absolute;
-  left: 98%;
+  right: 98%;       /* Pop menu to the left of the parent */
+  left: auto;
   top: 4px;
   min-width: 180px;
   background: rgba(22,22,22, 0.985);
@@ -178,7 +180,7 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   box-shadow: 0 3px 20px #222a 0.5;
   z-index: 110;
   margin-top: 0;
-  margin-left: 7px;
+  margin-right: 7px; /* gap from parent */
   display: none;
   flex-direction: column;
   border: 1.5px solid #4443;
@@ -216,10 +218,11 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   to   { opacity: 1; transform: none;}
 }
 
-/* Second-level dropdown right position for nested sub submenu */
+/* Second-level dropdown (e.g. Account/Support inside Settings) to left as well */
 .pch-navbar-dropdown-level2 > .pch-dropdown-menu {
   position: absolute;
-  left: 98%;
+  right: 98%;     /* Also pop this submenu to the left */
+  left: auto;
   top: 4px;
   min-width: 155px;
   background: rgba(22,22,22, 0.985);
@@ -227,7 +230,7 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
   box-shadow: 0 2px 18px #2227 0.4;
   z-index: 120;
   margin-top: 0;
-  margin-left: 7px;
+  margin-right: 7px;
   display: none;
   flex-direction: column;
   border: 1.5px solid #4445;
