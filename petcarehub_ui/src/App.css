@@ -18,53 +18,50 @@ body, html, #root, .app {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
-/* BUTTONS */
-.btn, button, input[type='submit'] {
-  background: linear-gradient(90deg, var(--kavia-orange) 0%, var(--accent) 100%);
-  color: #000;
-  border: none;
-  padding: 0.7em 1.5em;
+/* BUTTONS - RESTORED ORIGINAL STYLES */
+.btn,
+button,
+input[type='submit'] {
+  background: #fff;
+  color: #E87A41;
+  border: 2px solid #E87A41;
   border-radius: 6px;
-  font-weight: bold;
+  padding: 0.66em 1.5em;
   font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.04);
   cursor: pointer;
-  margin: 0.3em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
-}
-
-/* Button states: always gradient background, black text */
-.btn:hover, button:hover, input[type='submit']:hover,
-.btn:focus, button:focus, input[type='submit']:focus,
-.btn:active, button:active, input[type='submit']:active {
-  background: linear-gradient(90deg, var(--kavia-orange) 0%, var(--accent) 100%);
-  color: #000;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.10);
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  margin: 0.4em 0;
   outline: none;
 }
 
-/* Glass button style */
-.btn-glass {
-  background: var(--glass-light);
-  color: #000;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 1.5px 5px rgba(0,0,0,0.09);
-  border: none;
-  padding: 0.7em 1.5em;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  margin: 0.3em;
-  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+.btn:hover,
+button:hover,
+input[type='submit']:hover,
+.btn:focus,
+button:focus,
+input[type='submit']:focus {
+  background: #E87A41;
+  color: #fff;
+  border-color: #E87A41;
 }
 
-/* Glass button states: consistently glass-light background, black text */
+/* Glassy secondary button */
+.btn-glass {
+  background: rgba(255,255,255,0.15);
+  color: #E87A41;
+  border: 2px solid #E87A41;
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
 .btn-glass:hover,
-.btn-glass:focus,
-.btn-glass:active {
-  background: var(--glass-light);
-  color: #000;
+.btn-glass:focus {
+  background: #E87A41;
+  color: #fff;
+  border-color: #E87A41;
 }
 
 .btn-large {
