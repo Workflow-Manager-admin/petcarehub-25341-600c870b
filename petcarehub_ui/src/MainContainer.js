@@ -128,11 +128,11 @@ function MainContainer() {
             />
           } />
           <Route path="/health" element={
-            <MedicalRecords
+            <HealthTrackerPage
               pets={pets}
-              selectedPetId={selectedPetId ?? (pets.length ? pets[0].id : null)}
-              selectPet={handleSelectPet}
-              medical={medicalRecords}
+              selectedPetId={selectedPetId}
+              setSelectedPetId={setSelectedPetId}
+              medicalRecords={medicalRecords}
               setMedicalRecords={handleMedicalChange}
             />
           } />
