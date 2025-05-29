@@ -19,3 +19,60 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/MainContainer.js
+  Line 7:8:    'RoutineTracker' is defined but never used   no-unused-vars
+  Line 8:8:    'MedicalRecords' is defined but never used   no-unused-vars
+  Line 74:12:  'handleSelectPet' is defined but never used  no-unused-vars
+
+src/pages/ActivityPage.js
+  Line 5:7:     'DARK' is assigned a value but never used             no-unused-vars
+  Line 6:7:     'SECONDARY' is assigned a value but never used        no-unused-vars
+  Line 111:24:  'setGoalProgress' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/MainContainer.js
+  Line 7:8:    'RoutineTracker' is defined but never used   no-unused-vars
+  Line 8:8:    'MedicalRecords' is defined but never used   no-unused-vars
+  Line 74:12:  'handleSelectPet' is defined but never used  no-unused-vars
+
+src/pages/ActivityPage.js
+  Line 5:7:     'DARK' is assigned a value but never used             no-unused-vars
+  Line 6:7:     'SECONDARY' is assigned a value but never used        no-unused-vars
+  Line 111:24:  'setGoalProgress' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/MainContainer.js
+  Line 7:8:    'RoutineTracker' is defined but never used   no-unused-vars
+  Line 8:8:    'MedicalRecords' is defined but never used   no-unused-vars
+  Line 74:12:  'handleSelectPet' is defined but never used  no-unused-vars
+
+src/pages/ActivityPage.js
+  Line 5:7:     'DARK' is assigned a value but never used             no-unused-vars
+  Line 6:7:     'SECONDARY' is assigned a value but never used        no-unused-vars
+  Line 111:24:  'setGoalProgress' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/MainContainer.js
+  Line 7:8:    'RoutineTracker' is defined but never used   no-unused-vars
+  Line 8:8:    'MedicalRecords' is defined but never used   no-unused-vars
+  Line 74:12:  'handleSelectPet' is defined but never used  no-unused-vars
+
+src/pages/ActivityPage.js
+  Line 5:7:     'DARK' is assigned a value but never used             no-unused-vars
+  Line 6:7:     'SECONDARY' is assigned a value but never used        no-unused-vars
+  Line 111:24:  'setGoalProgress' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
