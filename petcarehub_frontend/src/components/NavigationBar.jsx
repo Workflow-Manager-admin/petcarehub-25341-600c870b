@@ -1,5 +1,24 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import {
+  FaTachometerAlt,
+  FaPaw,
+  FaRegIdBadge,
+  FaHeartbeat,
+  FaBowlFood,
+  FaRunning,
+  FaCalendarAlt,
+  FaFileAlt,
+  FaBell,
+  FaCog,
+  FaLifeRing,
+  FaUserCircle,
+  FaSignInAlt,
+  FaUserPlus,
+  FaHome,
+  FaUserCog
+} from "react-icons/fa";
+import { MdPets, MdOutlineVaccines, MdOutlineFastfood, MdOutlineDirectionsRun } from "react-icons/md";
 import "./NavigationBar.css";
 
 /**
