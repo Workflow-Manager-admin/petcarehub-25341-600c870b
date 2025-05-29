@@ -247,10 +247,17 @@ function ActivityPage() {
               <span className="badge badge-black-orange" style={{fontSize:"15px"}}>{item.duration} min</span>
               <span style={{
                 fontSize: 13,
-                color: "var(--kavia-orange, #E87A41)",
-                fontWeight: 600
+                color: "orange",
+                fontWeight: 700
               }}>
-                {new Date(item.ts).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+                {/* Show date in YYYY-MM-DD format */}
+                {(() => {
+                  const d = new Date(item.ts);
+                  if (!isNaN(d.getTime())) {
+                    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+                  }
+                  return "";
+                })()}
               </span>
             </div>
           ))}
