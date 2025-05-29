@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder SVG for Pet Wellness illustration; swap with a branded SVG as needed -->
+<svg width="240" height="180" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="40" width="240" height="104" rx="32" fill="#EEEDE4"/>
+  <ellipse cx="60" cy="120" rx="28" ry="40" fill="#C8E0CD"/>
+  <ellipse cx="180" cy="120" rx="28" ry="40" fill="#C8E0CD"/>
+  <ellipse cx="120" cy="90" rx="36" ry="57" fill="#F9D7B4"/>
+  <ellipse cx="120" cy="112" rx="65" ry="28" fill="#D7CFB3" opacity="0.4"/>
+  <circle cx="95" cy="84" r="10" fill="#fff"/>
+  <circle cx="145" cy="84" r="10" fill="#fff"/>
+  <circle cx="95" cy="86" r="5" fill="#656461"/>
+  <circle cx="145" cy="86" r="5" fill="#656461"/>
+  <ellipse cx="120" cy="104" rx="11" ry="7" fill="#fff"/>
+  <ellipse cx="120" cy="106" rx="5" ry="2.5" fill="#656461"/>
+  <ellipse cx="75" cy="55" rx="11" ry="6" fill="#F9D7B4"/>
+  <ellipse cx="165" cy="55" rx="11" ry="6" fill="#F9D7B4"/>
+  <ellipse cx="75" cy="58" rx="6" ry="3" fill="#F3C484"/>
+  <ellipse cx="165" cy="58" rx="6" ry="3" fill="#F3C484"/>
+  <ellipse cx="65" cy="112" rx="12" ry="4" fill="#B6CBBC"/>
+  <ellipse cx="175" cy="112" rx="12" ry="4" fill="#B6CBBC"/>
+</svg>
