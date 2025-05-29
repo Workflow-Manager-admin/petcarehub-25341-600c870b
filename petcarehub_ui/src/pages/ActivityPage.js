@@ -186,7 +186,7 @@ function ActivityPage() {
 
       {/* DAILY ACTIVITY LOG */}
       <Card title="Daily Activity Log" style={{ marginTop: 8 }}>
-        <div style={{
+        <div className="activity-log-input-row" style={{
           display: "flex",
           gap: 14,
           alignItems: "center",
@@ -197,13 +197,10 @@ function ActivityPage() {
             placeholder="Activity (e.g., Walk, Play)"
             value={activity}
             onChange={e => setActivity(e.target.value)}
+            className="duration-input"
             style={{
-              borderRadius: 8,
-              border: `1px solid ${BORDER}`,
-              background: "#232428",
-              color: "#fff",
-              padding: "10px 12px",
               width: 155,
+              marginRight: 5
             }}
           />
           <input
@@ -214,43 +211,46 @@ function ActivityPage() {
             className="duration-input duration-input-black"
             maxLength={3}
             style={{
-              background: "#111",
-              color: "#e2e2e2",
-              border: `1.5px solid ${BORDER}`,
+              width: 100,
+              marginRight: 5
             }}
           />
           <button
             className="btn"
-            style={{
-              background: ACCENT,
-              color: "#fff",
-              fontWeight: 700,
-              border: "none",
-              borderRadius: 8,
-              padding: "10px 20px",
-              cursor: "pointer",
-              letterSpacing: ".02em",
-              fontSize: 16,
-              transition: "box-shadow .2s",
-            }}
             onClick={addLog}
+            style={{marginRight: 0, marginTop: 0}}
           >Add Log</button>
         </div>
         <div style={{ marginTop: 18, maxHeight: 138, overflowY: "auto" }}>
           {log.length === 0 &&
-            <div style={{ color: "#aaa", fontStyle: "italic", fontSize: 15 }}>
+            <div className="text-muted" style={{ fontStyle: "italic", fontSize: 15 }}>
               No activities logged for today yet.
             </div>
           }
           {log.map((item, idx) => (
-            <div key={item.ts || idx} style={{
-              padding: "7px 0",
-              borderBottom: `1px solid ${BORDER}`,
-              display: "flex", gap: 16, alignItems: "center"
-            }}>
-              <span style={{minWidth:80, fontWeight:600, color:ACCENT}}>{item.activity}</span>
+            <div
+              key={item.ts || idx}
+              className="activity-log-row"
+              style={{
+                padding: "7px 0",
+                borderBottom: `1px solid ${BORDER}`,
+                display: "flex",
+                gap: 16,
+                alignItems: "center"
+              }}
+            >
+              <span style={{
+                minWidth: 80,
+                fontWeight: 600,
+                color: "var(--kavia-orange, #E87A41)"
+              }}>{item.activity}</span>
               <span className="badge badge-black-orange" style={{fontSize:"15px"}}>{item.duration} min</span>
-              <span style={{fontSize:13, color:"#999"}}>{new Date(item.ts).toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}</span>
+              <span style={{
+                fontSize: 13,
+                color: "var(--text-secondary, #999)"
+              }}>
+                {new Date(item.ts).toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}
+              </span>
             </div>
           ))}
         </div>
