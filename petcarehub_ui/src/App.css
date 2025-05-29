@@ -85,6 +85,30 @@
   --icon-fa: 'FontAwesome';
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 /* Dark mode overrides */
 [data-theme="dark"] {
   --background-gradient: var(--background-gradient-dark);
@@ -100,6 +124,30 @@
   --border-nav: 1.5px solid rgba(76,86,104,0.21);
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 /*------------------ Base/Reset Layer ------------------*/
 html {
   box-sizing: border-box;
@@ -108,7 +156,55 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 *, *:before, *:after { box-sizing: inherit; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 
 body {
   margin: 0;
@@ -119,9 +215,57 @@ body {
   transition: background var(--transition-main), color var(--transition-fast);
   line-height: 1.62;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 [data-theme="dark"] body {
   background: var(--background-gradient-dark);
   color: var(--text-main);
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Glassmorphism Containers/Cards ------------------*/
@@ -138,16 +282,112 @@ body {
   max-width: 960px;
   transition: box-shadow var(--transition-main), background var(--transition-fast);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 [data-theme="dark"] .container, [data-theme="dark"] .card, [data-theme="dark"] .card-glass {
   background: var(--glass-dark);
   box-shadow: var(--shadow-glass-dark);
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 .card { margin: 1.1rem auto; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .card-animated {
   opacity: 0;
   transform: translateY(30px) scale(0.96);
   animation: card-in 1s cubic-bezier(0.2,0.8,0.29,1) 0.12s forwards;
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Typography Standards ------------------*/
@@ -160,6 +400,30 @@ body {
   letter-spacing: 0.5px;
   text-shadow: 0 3px 14px rgba(130,169,154,0.07);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .subtitle {
   font-size: var(--subtitle);
   font-family: var(--font-inter), var(--font-sans);
@@ -167,11 +431,59 @@ body {
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .description {
   font-size: var(--text-sm);
   color: var(--text-secondary);
   margin-bottom: 0.89rem;
   font-family: var(--font-sans);
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Button Styles ------------------*/
@@ -196,6 +508,30 @@ body {
   position: relative;
   will-change: background,transform,box-shadow;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .btn-glass {
   background: var(--glass-light);
   color: var(--accent) !important;
@@ -204,9 +540,57 @@ body {
   margin-left: 0.46rem;
   margin-top: 0;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 [data-theme="dark"] .btn-glass {
   background: var(--glass-dark);
   color: var(--secondary) !important;
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 .btn .icon,
 .btn .lucide,
@@ -220,6 +604,30 @@ button .fa {
   vertical-align: middle;
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 .btn:hover, button:hover, input[type="submit"]:hover, .btn-glass:hover {
   background: linear-gradient(106deg, var(--accent) 59%, var(--primary) 98%);
   transform: translateY(-2px) scale(1.033);
@@ -227,12 +635,84 @@ button .fa {
   box-shadow: 0 8px 27px 0 rgba(174,187,115,0.21);
   transition: var(--transition-btn);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .btn-glass:hover {
   background: var(--glass-light);
   filter: brightness(1.1) blur(0.5px);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .btn:active, button:active, .btn-glass:active {
   transform: scale(0.97);
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Navbar Styles ------------------*/
@@ -252,10 +732,58 @@ button .fa {
   gap: 0.7em;
   transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 [data-theme="dark"] .navbar {
   background: var(--glass-dark);
   box-shadow: var(--shadow-md);
   border: var(--border-nav);
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Iconography Support ------------------*/
@@ -270,6 +798,30 @@ button .fa {
   line-height: 1;
   user-select: none;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 [data-theme="dark"] .icon,
 [data-theme="dark"] .lucide,
 [data-theme="dark"] .feather,
@@ -278,23 +830,263 @@ button .fa {
   color: var(--secondary);
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 /* Animate icon SVGs on hover for fun */
 .icon:hover svg, .lucide:hover svg, .feather:hover svg, .fa:hover svg { 
   filter: drop-shadow(0 2px 9px #e87a415e);
   transition: filter 0.19s;
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 /*------------------ Animations & Scroll-in/Fade-in ------------------*/
 @keyframes app-slidein {
   0% { opacity: 0; transform: translateY(30px) scale(0.98); }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
   100% { opacity: 1; transform: none; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 @keyframes card-in {
   to { opacity: 1; transform: none;}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 @keyframes scroll-in {
   from { opacity: 0; transform: translateY(40px);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
   to { opacity: 1; transform: none;}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 .app {
   min-height: 100vh;
@@ -303,12 +1095,108 @@ button .fa {
   animation: app-slidein 1.2s cubic-bezier(0.07,0.76,0.41,1.05);
   will-change: opacity,transform;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .scroll-in {
   opacity: 0;
   animation: scroll-in 0.90s 0.13s cubic-bezier(0.18,0.76,0.33,1) forwards;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .fadein, .scroll-in { opacity: 0;}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .fadein.visible, .scroll-in.visible { opacity: 1; animation: scroll-in 0.7s 0.044s cubic-bezier(0.21,0.99,0.41,1.13) forwards;}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -316,6 +1204,54 @@ button .fa {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Table/Tabular Section ------------------*/
@@ -327,6 +1263,30 @@ button .fa {
   border-radius: var(--card-radius);
   overflow-x: auto;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .table th, table th {
   background: var(--secondary);
   color: var(--accent);
@@ -335,63 +1295,855 @@ button .fa {
   border-bottom: 2px solid var(--primary);
   text-align: left;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .table td, table td {
   padding: 0.77em 1em;
   border-bottom: 1px solid var(--border-card);
   background: transparent;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .table tr:last-child td { border-bottom: none; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 
 /*------------------ Responsive Breakpoints ------------------*/
 .grid { display: grid; grid-gap: 1.3rem;}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .grid-2-cols { grid-template-columns: repeat(2,1fr);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .grid-3-cols { grid-template-columns: repeat(3,1fr);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 @media (max-width: 1050px) {
   .grid-3-cols { grid-template-columns: 1fr; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
   .grid-2-cols { grid-template-columns: 1fr; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 @media (max-width: 650px) {
   .container, .card, .card-glass {
     padding: 1.08rem 0.6rem;
     margin: 1rem auto;
   }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
   .navbar {
     flex-direction: column;
     gap: 0.6rem;
     padding: 0.6rem;
     min-height: 48px;
   }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
   .title { font-size: 1.27rem; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
   .subtitle { font-size: 1.01rem; }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Global Spacing Utilities ------------------*/
 .mt-xs { margin-top: var(--spacing-xs);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mt-sm { margin-top: var(--spacing-sm);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mt-md { margin-top: var(--spacing-md);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mt-lg { margin-top: var(--spacing-lg);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mb-xs { margin-bottom: var(--spacing-xs);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mb-sm { margin-bottom: var(--spacing-sm);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mb-md { margin-bottom: var(--spacing-md);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .mb-lg { margin-bottom: var(--spacing-lg);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .px-sm { padding-left: var(--spacing-sm); padding-right: var(--spacing-sm);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .px-md { padding-left: var(--spacing-md); padding-right: var(--spacing-md);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .px-lg { padding-left: var(--spacing-lg); padding-right: var(--spacing-lg);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .py-sm { padding-top: var(--spacing-sm); padding-bottom: var(--spacing-sm);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .py-md { padding-top: var(--spacing-md); padding-bottom: var(--spacing-md);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .py-lg { padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 
 /*------------------ Scrollbar Styles ------------------*/
 ::-webkit-scrollbar { width: 10px; background: var(--glass-light);}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 2em;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 @media (max-width: 600px) {
   ::-webkit-scrollbar { display: none;}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Links, Focus Styling ------------------*/
@@ -399,10 +2151,58 @@ button .fa {
   outline: 2px solid var(--warning);
   outline-offset: 3px;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 a, .btn, button, input, select, textarea {
   color: inherit;
   text-decoration: none;
   transition: box-shadow 0.17s, background 0.13s, color 0.15s;
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Misc Section styles (e.g., Calendar, Stats) ------------------*/
@@ -413,6 +2213,30 @@ a, .btn, button, input, select, textarea {
   box-shadow: 0 2px 18px 0 rgba(174,187,115,0.12);
   padding: 1.9em 1.5em;
   margin: 1.1rem 0 1.9rem 0;
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Utility: Glassy Pet Card ------------------*/
@@ -429,13 +2253,85 @@ a, .btn, button, input, select, textarea {
   animation: card-in 0.95s cubic-bezier(0.13,0.82,0.31,1) 0.15s forwards;
   opacity: 0;
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 [data-theme="dark"] .pet-card {
   background: var(--glass-dark);
   box-shadow: var(--shadow-glass-dark);
 }
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
 .pet-card.visible {
   opacity: 1;
   animation: card-in 0.6s 0s cubic-bezier(0.18,0.91,0.34,1) forwards;
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }
 
 /*------------------ Playground for More Utilities ------------------*/
@@ -452,6 +2348,30 @@ a, .btn, button, input, select, textarea {
   margin-right: 0.31em; margin-bottom: 0.12em;
 }
 
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
+}
+
 /* Hide visually but keep for screen readers */
 .sr-only {
   position:absolute;
@@ -462,4 +2382,28 @@ a, .btn, button, input, select, textarea {
   overflow:hidden;
   clip:rect(0,0,0,0);
   border:0;
+}
+
+/* Duration input for activity log -- highly visible in all themes */
+.duration-input {
+  background: #fff !important;
+  color: #191d1e !important;
+  border: 2px solid var(--accent, #656461) !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 12px;
+  width: 100px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(100,100,100,0.04);
+}
+.duration-input:focus {
+  border-color: var(--primary, #879d85) !important;
+  box-shadow: 0 2.5px 10px 0 rgba(100,160,130,0.06);
+}
+[data-theme="dark"] .duration-input {
+  background: #1d2330 !important;
+  color: #fff !important;
+  border-color: var(--secondary, #e2dda6) !important;
 }

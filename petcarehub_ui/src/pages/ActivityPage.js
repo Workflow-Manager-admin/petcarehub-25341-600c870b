@@ -211,14 +211,7 @@ function ActivityPage() {
             placeholder="Duration (min)"
             value={duration}
             onChange={e => setDuration(e.target.value.replace(/[^\d]/g, ""))}
-            style={{
-              borderRadius: 8,
-              border: `1px solid ${BORDER}`,
-              background: "#232428",
-              color: "#fff",
-              padding: "10px 12px",
-              width: 100,
-            }}
+            className="duration-input"
             maxLength={3}
           />
           <button
