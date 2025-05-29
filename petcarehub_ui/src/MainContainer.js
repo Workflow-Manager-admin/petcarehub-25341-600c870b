@@ -88,7 +88,6 @@ function MainContainer() {
              <header className="pch-main-header">
                <h1>
                  Welcome to PetCareHub
-                 <span aria-label="paw" className="pch-main-paw-header" style={{marginLeft: 10}}>🐾</span>
                </h1>
                <p className="pch-main-subtitle">Your modern pet parenting dashboard</p>
              </header>

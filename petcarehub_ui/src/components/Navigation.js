@@ -13,10 +13,10 @@ function Navigation() {
 
   // Dropdown structure for 13+ core sections.
   const navConfig = [
-    { label: 'Dashboard', to: '/dashboard', icon: '🏠' },
+    { label: 'Dashboard', to: '/dashboard', icon: '' },
     {
       label: 'My Pets',
-      icon: '🐾',
+      icon: '',
       to: '/pets',
       dropdown: [
         { label: 'Profile', to: '/pet-profile' },
@@ -27,17 +27,17 @@ function Navigation() {
     },
     {
       label: 'Appointments',
-      icon: '📅',
+      icon: '',
       to: '/appointments',
       dropdown: [
         { label: 'Manage', to: '/appointments' },
         { label: 'Notes / Documents', to: '/notes' },
       ]
     },
-    { label: 'Notifications', icon: '🔔', to: '/notifications' },
+    { label: 'Notifications', icon: '', to: '/notifications' },
     {
       label: 'Settings',
-      icon: '⚙️',
+      icon: '',
       to: '/settings',
       dropdown: [
         { label: 'Settings Home', to: '/settings' },
