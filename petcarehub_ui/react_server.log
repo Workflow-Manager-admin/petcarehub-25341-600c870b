@@ -19,3 +19,28 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 Compiling...
+Failed to compile.
+
+Syntax error: from "postcss-modules-local-by-default" plugin: /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/src/pages/ManageAppointmentsPage.module.css Unexpected '/'. Escaping special characters with \ may help. (4259:2)
+
+  4257 |   outline: 2px solid #2ecc71;
+  4258 |   outline-offset: 2px;
+> 4259 | }/.manageGradientBtn {
+       |  ^
+  4260 |   background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  4261 |   color: #fff;
+ERROR in ./src/pages/ManageAppointmentsPage.module.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[6].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/pages/ManageAppointmentsPage.module.css)
+Module build failed (from ./node_modules/css-loader/dist/cjs.js):
+
+SyntaxError
+
+(4259:2) from "postcss-modules-local-by-default" plugin: /home/kavia/workspace/code-generation/petcarehub-25341-600c870b/petcarehub_ui/src/pages/ManageAppointmentsPage.module.css Unexpected '/'. Escaping special characters with \ may help.
+
+  4257 |   outline: 2px solid #2ecc71;
+  4258 |   outline-offset: 2px;
+> 4259 | }/.manageGradientBtn {
+       |  ^
+  4260 |   background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  4261 |   color: #fff;
+
+webpack compiled with 1 error
