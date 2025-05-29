@@ -15,6 +15,7 @@ import Login from './pages/Auth/Login';
 import Signup from './pages/Auth/Signup';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
+import PetProfilePage from './pages/PetProfilePage';
 
 /**
  * PUBLIC_INTERFACE
@@ -106,12 +107,15 @@ function MainContainer() {
             />
           } />
           <Route path="/pet-profile" element={
-            <PetList
-              pets={pets}
-              setPets={handlePetsChange}
-              selectedPetId={selectedPetId}
-              setSelectedPetId={setSelectedPetId}
-            />
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <PetProfilePage
+                pets={pets}
+                selectedPetId={selectedPetId}
+                setSelectedPetId={setSelectedPetId}
+                medicalRecords={medicalRecords}
+                setMedicalRecords={handleMedicalChange}
+              />
+            </React.Suspense>
           } />
           <Route path="/health" element={
             <MedicalRecords
