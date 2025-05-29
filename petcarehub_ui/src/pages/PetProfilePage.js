@@ -304,73 +304,131 @@ function PetProfilePage() {
       marginBottom: 24,
       borderRadius: 16,
       boxShadow: "var(--shadow-glass-light)",
-      animationDelay: "0.15s"
+      animationDelay: "0.15s",
+      position: "relative"
     }}>
+      {/* Top-right edit button */}
+      {!isBasicInfoEdit && (
+        <button
+          className="btn btn-glass"
+          style={{
+            position: "absolute",
+            top: 15,
+            right: 17,
+            padding: "6px 18px",
+            fontWeight: 600,
+            background: "#fafdfe",
+            color: "#656461",
+            fontSize: "0.95em",
+            zIndex: 2,
+            boxShadow: "var(--shadow-btn)"
+          }}
+          aria-label="Edit basic info"
+          onClick={handleBasicInfoBeginEdit}
+        >
+          {icon("edit", { style: { marginRight: 7 } })} Edit
+        </button>
+      )}
+      {isBasicInfoEdit && (
+        <div
+          style={{
+            position: "absolute",
+            top: 14,
+            right: 10,
+            zIndex: 2,
+            display: "flex",
+            gap: "0.8em",
+          }}
+        >
+          <button
+            className="btn btn-glass"
+            style={{
+              padding: "6px 16px",
+              fontWeight: 600,
+              background: "var(--success)",
+              color: "#fff",
+              fontSize: "0.95em",
+              boxShadow: "var(--shadow-btn)"
+            }}
+            aria-label="Save changes"
+            onClick={handleBasicInfoSave}
+          >
+            {icon("check", { style: { marginRight: 7 } })} Save
+          </button>
+          <button
+            className="btn btn-glass"
+            style={{
+              padding: "6px 13px",
+              fontWeight: 600,
+              background: "#bbbbbb",
+              color: "#656461",
+              fontSize: "0.95em"
+            }}
+            aria-label="Cancel"
+            onClick={handleBasicInfoCancel}
+          >
+            {icon("x", { style: { marginRight: 6 } })} Cancel
+          </button>
+        </div>
+      )}
       <div className="grid grid-2-cols" style={{ gap: "1.7em", alignItems: "start" }}>
         <div>
           <InfoRow
             icon={icon("tag")}
             label="Breed"
-            value={pet.breed}
-            editable
-            field="breed"
-            editingField={editingField}
-            onStartEdit={() => startEdit("breed")}
-            onEdit={val => doneEdit("breed", val)}
+            value={isBasicInfoEdit ? basicInfoDraft.breed : pet.breed}
+            editable={false}
+            type="text"
+            editMode={isBasicInfoEdit}
+            onValueChange={val => handleBasicInfoChange("breed", val)}
           />
           <InfoRow
             icon={icon("cake")}
             label="DOB"
-            value={pet.dob}
-            editable
+            value={isBasicInfoEdit ? basicInfoDraft.dob : pet.dob}
+            editable={false}
             type="date"
-            field="dob"
-            editingField={editingField}
-            onStartEdit={() => startEdit("dob")}
-            onEdit={val => doneEdit("dob", val)}
+            editMode={isBasicInfoEdit}
+            onValueChange={val => handleBasicInfoChange("dob", val)}
           />
           <InfoRow
             icon={icon("paw")}
             label="Color"
-            value={pet.color}
-            editable
-            field="color"
-            editingField={editingField}
-            onStartEdit={() => startEdit("color")}
-            onEdit={val => doneEdit("color", val)}
+            value={isBasicInfoEdit ? basicInfoDraft.color : pet.color}
+            editable={false}
+            type="text"
+            editMode={isBasicInfoEdit}
+            onValueChange={val => handleBasicInfoChange("color", val)}
           />
         </div>
         <div>
           <InfoRow
             icon={icon("calendar")}
             label="Age"
-            value={pet.age + " yrs"}
-            editable
+            value={isBasicInfoEdit ? basicInfoDraft.age : pet.age + " yrs"}
+            editable={false}
             type="number"
-            field="age"
-            editingField={editingField}
-            onStartEdit={() => startEdit("age")}
-            onEdit={val => doneEdit("age", val)}
+            editMode={isBasicInfoEdit}
+            onValueChange={val => handleBasicInfoChange("age", val)}
+            forceRawValue={isBasicInfoEdit}
           />
           <InfoRow
             icon={icon("shield")}
             label="Microchip"
-            value={pet.microchip}
-            editable
-            field="microchip"
-            editingField={editingField}
-            onStartEdit={() => startEdit("microchip")}
-            onEdit={val => doneEdit("microchip", val)}
+            value={isBasicInfoEdit ? basicInfoDraft.microchip : pet.microchip}
+            editable={false}
+            type="text"
+            editMode={isBasicInfoEdit}
+            onValueChange={val => handleBasicInfoChange("microchip", val)}
           />
           <InfoRow
             icon={icon("clipboard")}
             label="Weight"
-            value={pet.weight}
-            editable
-            field="weight"
-            editingField={editingField}
-            onStartEdit={() => startEdit("weight")}
-            onEdit={val => doneEdit("weight", val)}
+            value={isBasicInfoEdit ? basicInfoDraft.weight : pet.weight}
+            editable={false}
+            type="text"
+            editMode={isBasicInfoEdit}
+            onValueChange={val => handleBasicInfoChange("weight", val)}
           />
         </div>
       </div>
