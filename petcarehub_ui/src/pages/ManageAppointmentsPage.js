@@ -1,413 +1,669 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from 'react';
+
 // PUBLIC_INTERFACE
 /**
  * ManageAppointmentsPage
- * Main page for managing appointments in PetCareHub.
- * Sections: Upcoming Appointments, Calendar View, Appointment Booking Form, Appointment History, Reminders, Documents.
+ * A modern, stylized page to manage pet appointments - includes upcoming appointments,
+ * calendar view, appointment history, creation form (modal), reminders, and document upload with preview.
+ * Uses cards, tables, accent backgrounds, animated gradient buttons, icons, and modern layout.
  */
 function ManageAppointmentsPage() {
-  /** Placeholder data **/
-  const sampleUpcoming = [
-    { id: 1, pet: "Bella", type: "Vet Visit", date: "2024-06-10", time: "10:30", status: "Scheduled" },
-    { id: 2, pet: "Max", type: "Vaccination", date: "2024-06-12", time: "15:00", status: "Scheduled" }
-  ];
-  const sampleHistory = [
-    { id: 11, pet: "Bella", type: "Grooming", date: "2024-04-15", status: "Completed" },
-    { id: 12, pet: "Max", type: "Surgery", date: "2024-03-11", status: "Completed" }
-  ];
-  const sampleDocs = [
-    { name: "VaccineRecord.pdf", type: "pdf" },
-    { name: "Xray.png", type: "image" }
-  ];
+  // Dummy data for demo
+  const [upcomingAppointments, setUpcomingAppointments] = useState([
+    {
+      id: 1,
+      pet: 'Milo',
+      type: 'Vet Check-Up',
+      date: '2024-06-19',
+      time: '10:00',
+      notes: 'Annual wellness exam',
+      icon: '🩺'
+    },
+    {
+      id: 2,
+      pet: 'Whiskers',
+      type: 'Grooming',
+      date: '2024-06-22',
+      time: '14:30',
+      notes: 'Haircut and brush-out',
+      icon: '✂️'
+    }
+  ]);
+  const [history, setHistory] = useState([
+    {
+      id: 3,
+      pet: 'Milo',
+      type: 'Vaccine',
+      date: '2024-04-05',
+      time: '09:00',
+      notes: 'Rabies booster shot',
+      icon: '💉'
+    },
+    {
+      id: 4,
+      pet: 'Whiskers',
+      type: 'Dental Cleaning',
+      date: '2024-03-12',
+      time: '11:15',
+      notes: 'Teeth Cleaned',
+      icon: '😺'
+    }
+  ]);
+  const [showForm, setShowForm] = useState(false);
+  const [showUpload, setShowUpload] = useState(false);
+  const [filterType, setFilterType] = useState('all');
+  const [calendarMode, setCalendarMode] = useState('month');
+  const [reminders, setReminders] = useState({
+    email: true,
+    sms: false,
+    push: true,
+  });
+  const [uploadFile, setUploadFile] = useState(null);
+  const [uploadPreview, setUploadPreview] = useState(null);
 
-  const [showBooking, setShowBooking] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
-  const [calendarFilter, setCalendarFilter] = useState("all");
-  const [remindersEnabled, setRemindersEnabled] = useState(true);
-  const [uploads, setUploads] = useState(sampleDocs);
+  const uploadInputRef = useRef();
 
-  // ----- Handlers (minimal logic for illustration) -----
-  const handleBookOpen = () => { setShowBooking(true); setCurrentStep(1); };
-  const handleBookClose = () => setShowBooking(false);
-  const handleStepAdvance = () => setCurrentStep((s) => Math.min(s + 1, 3));
-  const handleStepBack = () => setCurrentStep((s) => Math.max(s - 1, 1));
-  const handleRebook = (historyId) => { setShowBooking(true); setCurrentStep(1); };
-  const handleUpload = (e) => {
-    const files = Array.from(e.target.files || []);
-    setUploads((prev) => [
-      ...prev,
-      ...files.map((f) => ({
-        name: f.name,
-        type: f.type.startsWith("image") ? "image" : f.type === "application/pdf" ? "pdf" : "other",
-        file: f
-      }))
+  // Handlers
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Example: Collect info and add to appointments (not persistent)
+    const form = e.target;
+    setUpcomingAppointments([
+      ...upcomingAppointments,
+      {
+        id: Math.random(),
+        pet: form.pet.value,
+        type: form.type.value,
+        date: form.date.value,
+        time: form.time.value,
+        notes: form.notes.value,
+        icon: form.type.value === 'Vet Check-Up' ? '🩺'
+          : form.type.value === 'Grooming' ? '✂️'
+          : form.type.value === 'Vaccine' ? '💉'
+          : '📅',
+      }
     ]);
+    setShowForm(false);
+    form.reset();
   };
 
-  // Minimal calendar placeholder
-  function Calendar() {
-    // In a real implementation, import a calendar package.
-    return (
-      <div style={{
-        background: "var(--secondary, #e2dda6)",
-        borderRadius: "12px",
-        minHeight: 200,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: 18,
-        color: "#656461"
-      }}>
-        <span role="img" aria-label="calendar" style={{ marginRight: 12 }}>📆</span>
-        <span>Minimal Calendar Placeholder - Upcoming Events Marked</span>
-      </div>
-    );
-  }
+  const handleRemindersToggle = (type) => {
+    setReminders({ ...reminders, [type]: !reminders[type] });
+  };
 
-  // ----- UI Layout -----
-  return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 8px" }}>
-      <h1 className="title" style={{ marginBottom: 16 }}>Manage Appointments</h1>
+  const handleUploadChange = (e) => {
+    const file = e.target.files[0];
+    setUploadFile(file);
+    if (file && file.type.startsWith("image")) {
+      const reader = new FileReader();
+      reader.onload = () => setUploadPreview(reader.result);
+      reader.readAsDataURL(file);
+    } else if (file) {
+      setUploadPreview(null);
+    }
+  };
 
-      <div className="card" style={{ marginBottom: 24, padding: 24, borderRadius: 12, boxShadow: "0 2px 12px #68686812" }}>
-        <SectionTitle icon="🕑">Upcoming Appointments</SectionTitle>
-        <UpcomingAppointmentsTable appointments={sampleUpcoming} onBook={handleBookOpen} />
-      </div>
+  const handleFilterChange = (e) => {
+    setFilterType(e.target.value);
+  };
 
-      <div className="cards-row" style={{
-        display: "flex",
-        gap: 24,
-        flexWrap: "wrap",
-        marginBottom: 24
-      }}>
-        <div className="card" style={{
-          flex: 2, minWidth: 320, padding: 24, borderRadius: 12, boxShadow: "0 2px 12px #6868680d"
-        }}>
-          <SectionTitle icon="📅">Calendar View</SectionTitle>
-          <label style={{ display: "flex", alignItems: "center", marginBottom: 12 }}>
-            <span style={{ marginRight: 8 }}>Filter:</span>
-            <select value={calendarFilter} onChange={e => setCalendarFilter(e.target.value)} style={{ padding: 4, borderRadius: 6 }}>
-              <option value="all">All</option>
-              <option value="vet">Vet</option>
-              <option value="grooming">Grooming</option>
-              <option value="vaccination">Vaccination</option>
-            </select>
-          </label>
-          <Calendar />
-          <div style={{ fontSize: 13, color: "var(--text-secondary)", marginTop: 6 }}>
-            Dates with events are highlighted. Click a date for appointment details.
-          </div>
-        </div>
-        <div className="card" style={{
-          flex: 1, minWidth: 280, padding: 24, borderRadius: 12, boxShadow: "0 2px 12px #6868680d"
-        }}>
-          <SectionTitle icon="⏰">Reminders & Notifications</SectionTitle>
-          <div style={{ marginBottom: 18, display: "flex", alignItems: "center" }}>
-            <ToggleSwitch checked={remindersEnabled} onChange={() => setRemindersEnabled(r => !r)} />
-            <span style={{ marginLeft: 12, color: remindersEnabled ? "#39a944" : "#a77" }}>
-              {remindersEnabled ? "Reminders On" : "Reminders Off"}
-            </span>
-          </div>
-          <div style={{ fontSize: 14, color: "var(--text-secondary)", marginBottom: 12 }}>
-            Email & push notifications for upcoming appointments and tasks.
-          </div>
-        </div>
-      </div>
+  const handleCalendarMode = (mode) => setCalendarMode(mode);
 
-      {/* Document Section */}
-      <div className="card" style={{ marginBottom: 24, padding: 24, borderRadius: 12, boxShadow: "0 2px 12px #68686812" }}>
-        <SectionTitle icon="📎">Documents (PDF/Image Uploads & Previews)</SectionTitle>
-        <div style={{ marginBottom: 14 }}>
-          <label className="btn" style={{ padding: "6px 12px", cursor: "pointer" }}>
-            <span role="img" aria-label="upload">⬆️</span> Upload Document
-            <input type="file" accept="image/*,application/pdf" style={{ display: "none" }} multiple onChange={handleUpload} />
-          </label>
-        </div>
-        <div style={{
-          display: "flex", gap: 18, flexWrap: "wrap"
-        }}>
-          {uploads.map((doc, idx) => (
-            <DocPreview key={idx} doc={doc} />
-          ))}
-        </div>
-      </div>
+  // UI Constants for demo
+  const appointmentTypes = [
+    { label: 'All', value: 'all', icon: '📅' },
+    { label: 'Vet', value: 'Vet Check-Up', icon: '🩺' },
+    { label: 'Grooming', value: 'Grooming', icon: '✂️' },
+    { label: 'Vaccine', value: 'Vaccine', icon: '💉' }
+  ];
 
-      {/* Appointment History */}
-      <div className="card" style={{ marginBottom: 24, padding: 24, borderRadius: 12, boxShadow: "0 2px 12px #68686812" }}>
-        <SectionTitle icon="📜">Appointment History</SectionTitle>
-        <AppointmentHistoryTable history={sampleHistory} onRebook={handleRebook} />
-      </div>
+  // Calendar Demo (simplified, not real calendar rendering)
+  const currentMonth = [
+    { day: 10, appointments: [{ ...upcomingAppointments[0] }] },
+    { day: 14, appointments: [{ ...upcomingAppointments[1] }] }
+  ];
 
-      {/* Booking Form Modal */}
-      {showBooking &&
-        <Modal onClose={handleBookClose}>
-          <StepwiseAppointmentForm currentStep={currentStep}
-            onAdvance={handleStepAdvance}
-            onBack={handleStepBack}
-            onClose={handleBookClose}
-          />
-        </Modal>
-      }
-    </div>
-  );
-}
+  // Filtered history
+  const filteredHistory = filterType === 'all'
+    ? history
+    : history.filter(a => a.type === filterType);
 
-/* ========== Utility components ========== */
+  // Animation for gradient button
+  const gradientBtnStyle = {
+    background: 'linear-gradient(90deg, #E87A41, #e2dda6, #879d85, #656461, #E87A41)',
+    backgroundSize: '300% 300%',
+    animation: 'gradientBG 5s ease infinite',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '2rem',
+    fontWeight: 600,
+    letterSpacing: '0.5px',
+    fontSize: '1rem',
+    padding: '0.75rem 2rem',
+    cursor: 'pointer',
+    boxShadow: '0 2px 14px -6px #879d85, 0 1px 5px -5px #e2dda6',
+    transition: 'box-shadow 0.2s',
+  };
 
-function SectionTitle({ icon, children }) {
-  return <h2 className="subtitle" style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 600 }}>
-    <span style={{ fontSize: 22 }}>{icon}</span>
-    {children}
-  </h2>;
-}
+  // Modern card shadows and bg
+  const cardStyle = {
+    background: 'rgba(255,255,255,0.12)',
+    boxShadow: '0 4px 20px -8px #879d85, 0 1px 5px -3px #1A1A1A',
+    borderRadius: '1.5rem',
+    padding: '1.5rem',
+    margin: '0 .5rem 2rem .5rem',
+    border: '1px solid var(--border-color)',
+    color: 'var(--text-color)',
+    backdropFilter: 'blur(7px)'
+  };
 
-function UpcomingAppointmentsTable({ appointments, onBook }) {
-  return (
-    <div>
-      <button className="btn btn-large" style={{
-        float: "right", marginBottom: 8, background: "var(--kavia-orange)", color: "#fff"
-      }} onClick={onBook}>
-        <span role="img" aria-label="plus">➕</span> Book New Appointment
-      </button>
-      <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 8 }}>
-        <thead>
-          <tr style={{ background: "rgba(228,221,166,0.35)" }}>
-            <th style={th}>Pet</th>
-            <th style={th}>Type</th>
-            <th style={th}>Date</th>
-            <th style={th}>Time</th>
-            <th style={th}>Status</th>
-            <th style={th}></th>
-          </tr>
-        </thead>
-        <tbody>
-          {appointments.map(appt => (
-            <tr key={appt.id} style={{ borderBottom: "1px solid #ececec" }}>
-              <td style={td}>{appt.pet}</td>
-              <td style={td}>{appt.type}</td>
-              <td style={td}>{appt.date}</td>
-              <td style={td}>{appt.time}</td>
-              <td style={td}><span style={{ color: "#39a944" }}>{appt.status}</span></td>
-              <td style={td}>
-                <button className="btn" style={{ padding: "2px 9px", fontSize: 13 }}>View</button>
-                <button className="btn" style={{
-                  padding: "2px 9px", fontSize: 13, marginLeft: 6,
-                  background: "#eee", color: "#222"
-                }}>Cancel</button>
-              </td>
-            </tr>
-          ))}
-          {appointments.length === 0 &&
-            <tr><td colSpan={6} style={td}>No upcoming appointments.</td></tr>
-          }
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function AppointmentHistoryTable({ history, onRebook }) {
-  const [filter, setFilter] = useState("all");
-  const filtered = (filter === "all") ? history : history.filter(h => h.type.toLowerCase() === filter);
-  return (
-    <div>
-      <div style={{ marginBottom: 10 }}>
-        <span style={{ marginRight: 8 }}>Filter:</span>
-        <select value={filter} onChange={e => setFilter(e.target.value)} style={{ padding: 4, borderRadius: 6 }}>
-          <option value="all">All</option>
-          <option value="vet visit">Vet Visit</option>
-          <option value="grooming">Grooming</option>
-          <option value="vaccination">Vaccination</option>
-          <option value="surgery">Surgery</option>
-        </select>
-      </div>
-      <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 8 }}>
-        <thead>
-          <tr style={{ background: "rgba(228,221,166,0.25)" }}>
-            <th style={th}>Pet</th>
-            <th style={th}>Type</th>
-            <th style={th}>Date</th>
-            <th style={th}>Status</th>
-            <th style={th}></th>
-          </tr>
-        </thead>
-        <tbody>
-          {filtered.map(appt => (
-            <tr key={appt.id} style={{ borderBottom: "1px solid #ececec" }}>
-              <td style={td}>{appt.pet}</td>
-              <td style={td}>{appt.type}</td>
-              <td style={td}>{appt.date}</td>
-              <td style={td}><span style={{ color: "#999" }}>{appt.status}</span></td>
-              <td style={td}>
-                <button className="btn" style={{
-                  padding: "2px 9px", fontSize: 13, background: "var(--kavia-orange)", color: "#fff"
-                }} onClick={() => onRebook(appt.id)}>
-                  <span role="img" aria-label="repeat">🔁</span> Rebook
-                </button>
-              </td>
-            </tr>
-          ))}
-          {filtered.length === 0 &&
-            <tr><td colSpan={5} style={td}>No appointment history.</td></tr>
-          }
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-/** Stepwise Appointment Booking Modal/Form */
-function StepwiseAppointmentForm({ currentStep, onAdvance, onBack, onClose }) {
-  // Placeholder for a 3-step process
-  return (
-    <div style={{ width: 370, padding: 18 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-        <h3 style={{ fontWeight: 600 }}>Book Appointment</h3>
-        <button onClick={onClose} style={{
-          border: "none", background: "transparent", fontSize: 21, cursor: "pointer"
-        }} title="Close"><span role="img" aria-label="close">✖️</span></button>
-      </div>
-      <StepProgress current={currentStep} total={3} />
-      {currentStep === 1 && (
-        <div style={{ margin: "16px 0" }}>
-          <label>
-            <span>Pet:</span>
-            <select style={inputStyle}>
-              <option>Bella</option>
-              <option>Max</option>
-            </select>
-          </label>
-          <label style={{ display: "block", marginTop: 10 }}>
-            <span>Appointment Type:</span>
-            <select style={inputStyle}>
-              <option>Vet Visit</option>
-              <option>Grooming</option>
-              <option>Vaccination</option>
-            </select>
-          </label>
-        </div>
-      )}
-      {currentStep === 2 && (
-        <div style={{ margin: "16px 0" }}>
-          <label>
-            <span>Date:</span>
-            <input type="date" style={inputStyle} />
-          </label>
-          <label style={{ display: "block", marginTop: 10 }}>
-            <span>Time:</span>
-            <input type="time" style={inputStyle} />
-          </label>
-        </div>
-      )}
-      {currentStep === 3 && (
-        <div style={{ margin: "16px 0" }}>
-          <strong>Review & Confirm</strong>
-          <div style={{ fontSize: 15, marginTop: 8 }}>
-            Appointment for <b>Bella</b> - <b>Vet Visit</b><br />on <b>2024-06-10</b> at <b>10:30</b>
-          </div>
-        </div>
-      )}
-      <div style={{ display: "flex", justifyContent: "space-between", marginTop: 24 }}>
-        <button className="btn" style={{
-          background: "#ececec", color: "#222", minWidth: 88
-        }} disabled={currentStep === 1} onClick={onBack}>Back</button>
-        {currentStep < 3 &&
-          <button className="btn" style={{ background: "var(--kavia-orange)", color: "#fff", minWidth: 88 }} onClick={onAdvance}>Next</button>
-        }
-        {currentStep === 3 &&
-          <button className="btn" style={{
-            background: "#39a944", color: "#fff", minWidth: 88
-          }} onClick={onClose}>Confirm</button>
-        }
-      </div>
-    </div>
-  );
-}
-
-/** Step Progress Indicator */
-function StepProgress({ current, total }) {
-  return (
-    <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
-      {[...Array(total)].map((_, idx) => (
-        <div key={idx}
-          style={{
-            width: 28, height: 6,
-            borderRadius: 7,
-            background: idx + 1 <= current ? "var(--kavia-orange)" : "#eee",
-            transition: "background .35s"
-          }} />
-      ))}
-    </div>
-  );
-}
-
-/** Modal shell with fade */
-function Modal({ onClose, children }) {
   return (
     <div style={{
-      position: "fixed", zIndex: 1000, top: 0, left: 0, width: "100vw", height: "100vh",
-      background: "rgba(32,32,32,0.31)", display: "flex", alignItems: "center", justifyContent: "center",
-      transition: "background .4s"
+      minHeight: '100vh',
+      background: 'linear-gradient(132deg, #e2dda6 0%, #879d85 40%, #656461 100%)',
+      fontFamily: '\'Inter\', sans-serif',
+      padding: '0',
+      overflowX: 'hidden',
     }}>
-      <div style={{
-        background: "#fff", borderRadius: 16, boxShadow: "0 5px 24px #2222", minWidth: 260,
-        animation: "fadein-modal .36s",
-        position: "relative"
-      }}>
-        {children}
-      </div>
       <style>{`
-        @keyframes fadein-modal {
-          0% { transform: translateY(48px); opacity: 0;}
-          100% { transform: translateY(0); opacity: 1;}
+        @keyframes gradientBG {
+          0%,100% {background-position:0% 50%;}
+          50% {background-position:100% 50%;}
+        }
+        .appointments-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 2vw 2vw 5vw 2vw;
+        }
+        .section-title {
+          font-family: 'Inter',sans-serif;
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: -1px;
+          margin-bottom: 1rem;
+          color: #1A1A1A;
+          text-shadow: 0 2px 5px rgba(232,122,65,0.03);
+        }
+        .upcoming-cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: flex-start;
+        }
+        .card {
+          transition: transform 0.18s, box-shadow 0.18s;
+        }
+        .card:hover {
+          transform: translateY(-3px) scale(1.02) rotate(-1.3deg);
+          box-shadow: 0 8px 25px -4px #e2dda6, 0 4px 20px -12px #E87A41;
+        }
+        .calendar-wrap {
+          background: rgba(255,255,255,0.09);
+          border-radius: 22px;
+          overflow-x:auto;
+          padding: 2rem 1rem 1rem 1rem;
+          margin-bottom: 2rem;
+        }
+        .calendar-controls {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+        .calendar-grid {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: .8rem;
+          min-width: 370px;
+        }
+        .calendar-day {
+          min-height: 72px;
+          background: rgba(134,157,133, 0.13);
+          border-radius: 13px;
+          color: #1A1A1A;
+          padding: 0.45rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 1rem;
+          border: 1.5px solid #e2dda6;
+        }
+        .calendar-appt {
+          font-size: 0.95rem;
+          background: #E87A41cc;
+          color: #fff;
+          border-radius: 0.9rem;
+          margin: 0.25rem 0;
+          padding: 0.14rem 0.7rem;
+          box-shadow: 0 3px 12px -7px #E87A41;
+        }
+        .appt-type-filter {
+          display: flex;
+          gap: 0.7rem;
+          align-items: center;
+          margin-bottom: 1.2rem;
+        }
+        .appt-type-btn {
+          padding: 0.5rem 1.1rem;
+          border-radius: 2rem;
+          background: #e2dda6B0;
+          color: #1A1A1A;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: background .18s, box-shadow .16s;
+          box-shadow: 0 1px 6px -3px #e2dda6;
+        }
+        .appt-type-btn.active, .appt-type-btn:hover {
+          background: #e87a41;
+          color: #fff;
+          box-shadow: 0 2px 12px -5px #e87a41;
+        }
+        .app-history-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .app-history-table th, .app-history-table td {
+          font-size: 1rem;
+          padding: 0.7em 1em;
+          background:rgba(234,218,166,0.08);
+          font-family: inherit;
+        }
+        .app-history-table th {
+          font-weight: 800;
+          color: #879d85;
+          background: #1a1a1aaa;
+        }
+        .app-history-table tr:nth-child(even) td {
+          background:rgba(135,157,133,0.07);
+        }
+        .animated-btn {
+          margin-top: 2rem;
+        }
+        .reminders-wrap {
+          background:#65646144;
+          border-radius: 17px;
+          padding: 1.3rem 2rem;
+          margin: 0 0 2rem 0;
+          color: #fff;
+          box-shadow: 0 1.5px 12px -7px #656461;
+        }
+        .reminder-toggle-list {
+          display: flex;
+          gap: 2.5rem;
+        }
+        .toggle-switch {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.7rem;
+          font-size: 1.1rem;
+        }
+        .toggle-slider {
+          width: 38px; height: 21px;
+          background: #e2dda6;
+          border-radius: 22px;
+          position: relative; cursor: pointer;
+          transition: background .2s;
+        }
+        .toggle-slider.checked { background: #E87A41;}
+        .toggle-dot {
+          width: 18px; height:18px;
+          border-radius:50%;
+          background:#fff;
+          position:absolute;
+          top:1.5px; left:2px;
+          transition: left .19s;
+        }
+        .toggle-slider.checked .toggle-dot { left: 17.5px; }
+        .doc-upload-wrap {
+          margin: 0 0 2rem 0;
+          padding: 1.1rem 2rem;
+          background: #e2dda6aa;
+          border-radius: 15px;
+          color: #333;
+          box-shadow: 0 2px 13px -7px #E87A41;
+        }
+        .doc-upload-preview {
+          margin-top: 0.7rem;
+          display: flex;
+          gap: 1.2rem;
+        }
+        .doc-preview-img {
+          max-width: 130px; max-height:130px; border-radius: 9px;
+          border:2.3px solid #879d85;
+          box-shadow:0 1.7px 8px -5px #1A1A1A;
+        }
+        /* Modal */
+        .modal-overlay {
+          position:fixed;
+          top:0; left:0; right:0; bottom:0;
+          background: rgba(33,41,52,0.45);
+          z-index:98;
+          display: flex; align-items: center; justify-content: center;
+        }
+        .modal-content {
+          max-width: 410px;
+          background: #fff;
+          border-radius: 1.3rem;
+          box-shadow: 0 2px 32px -8px #879d85;
+          padding:2.2rem 2.2rem 1.3rem 2.2rem;
+          color: #1A1A1A;
+          animation: modalPop .33s cubic-bezier(.66,.05,.53,1.43);
+          z-index:99;
+        }
+        @keyframes modalPop {
+          0% { transform: scale(0.92) translateY(40px);}
+          100% { transform: scale(1) translateY(0);}
+        }
+        .modal-close {
+          float:right;
+          font-size:1.7rem;
+          color: #656461;
+          cursor:pointer;
+          font-weight:700;
+        }
+        .new-appt-form label {
+          margin-bottom:0.6rem;
+          font-size:1.02rem;
+          font-weight:600;
+        }
+        .new-appt-form input, .new-appt-form select, .new-appt-form textarea {
+          width:100%;
+          margin-bottom:1rem;
+          padding:0.55rem 0.7rem;
+          border-radius:6px;
+          border:1px solid #e2dda6;
+          font-size:1.01rem;
+        }
+        .rebook-btn {
+          background: #E87A41cc;
+          border: none;
+          color: #fff;
+          border-radius: 1rem;
+          padding: 0.35rem 1.15rem;
+          font-weight: 600;
+          margin:0.1rem 0;
+          cursor: pointer;
+          transition: background .18s;
+        }
+        .rebook-btn:hover {
+          background:#879d85;
+        }
+        @media (max-width:920px) {
+          .upcoming-cards { flex-direction:column; gap:1.1rem;}
+        }
+        @media (max-width:600px) {
+          .section-title {font-size:1.32rem;}
+          .calendar-wrap {padding:1rem;}
+          .reminder-toggle-list {flex-direction:column;}
+          .appointments-container {padding:1.3vw;}
         }
       `}</style>
+
+      <div className="appointments-container">
+
+        {/* Section: Upcoming Appointments */}
+        <div>
+          <div className="section-title">Upcoming Appointments</div>
+          <div className="upcoming-cards">
+            {upcomingAppointments.map(a => (
+              <div key={a.id} className="card" style={cardStyle}>
+                <div style={{
+                  fontSize: "2.2rem",
+                  marginBottom: ".7em"
+                }}>{a.icon}</div>
+                <div style={{ fontWeight: 700, fontSize: "1.11rem" }}>{a.type}</div>
+                <div style={{ color: "#E87A41", fontWeight: 600 }}>
+                  {a.date} <span style={{ color: "#656461", marginLeft: "0.22em" }}>{a.time}</span>
+                </div>
+                <div style={{ color: "#879d85", marginTop: ".4rem" }}>
+                  Pet: <strong>{a.pet}</strong>
+                </div>
+                <div style={{ color: "#656461", fontSize: ".95rem", marginTop: ".4rem" }}>{a.notes}</div>
+              </div>
+            ))}
+            {/* Add new appointment animated button */}
+            <button
+              style={gradientBtnStyle}
+              className="animated-btn"
+              onClick={() => setShowForm(true)}
+            >
+              <span style={{ fontSize: '1.40rem', marginRight: ".6em" }}>＋</span> New Appointment
+            </button>
+          </div>
+        </div>
+
+        {/* Section: Calendar View */}
+        <div className="calendar-wrap" style={{ marginTop: '2.7rem' }}>
+          <div className="section-title" style={{ marginTop: 0 }}>Calendar</div>
+          <div className="calendar-controls">
+            <button
+              className="appt-type-btn"
+              style={calendarMode === 'month' ? { background: "#E87A41", color: "#fff" } : {}}
+              onClick={() => handleCalendarMode('month')}
+            >
+              <span role="img" aria-label="month" style={{ fontSize: "1.2rem", marginRight: "0.2em" }}>🗓️</span>
+              Month
+            </button>
+            <button
+              className="appt-type-btn"
+              style={calendarMode === 'week' ? { background: "#E87A41", color: "#fff" } : {}}
+              onClick={() => handleCalendarMode('week')}
+            >
+              <span role="img" aria-label="week" style={{ fontSize: "1.1rem", marginRight: "0.2em" }}>📅</span>
+              Week
+            </button>
+            {/* Filter by type */}
+            <div className="appt-type-filter">
+              {appointmentTypes.map(at =>
+                <button
+                  key={at.value}
+                  className={`appt-type-btn${filterType === at.value ? " active" : ""}`}
+                  onClick={() => setFilterType(at.value)}
+                >
+                  <span style={{ marginRight: ".35rem", fontSize: '1.2rem' }}>{at.icon}</span> {at.label}
+                </button>
+              )}
+            </div>
+          </div>
+          {/* Simple demo calendar - 7 days/week x 4 weeks of "month" */}
+          <div className="calendar-grid">
+            {Array.from({ length: 28 }).map((_, i) => {
+              const dayNum = i + 1;
+              const apptsToday = currentMonth.filter(d => d.day === dayNum)
+                .flatMap(d => d.appointments)
+                .filter(a => filterType === 'all' || a.type === filterType);
+              return (
+                <div className="calendar-day" key={dayNum}>
+                  <span style={{ fontWeight: 600 }}>{dayNum}</span>
+                  {apptsToday.length > 0 && apptsToday.map((appt, idx) => (
+                    <div className="calendar-appt" key={idx}>
+                      <span style={{ fontWeight: 700 }}>{appt.icon}</span>{' '}
+                      <span>{appt.type}</span>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Section: Reminders/Notifications Toggles */}
+        <div className="reminders-wrap">
+          <div className="section-title" style={{ color: '#e2dda6', marginBottom: '0.6em' }}>
+            Reminders & Notifications
+          </div>
+          <div className="reminder-toggle-list">
+            {['email', 'sms', 'push'].map(type => (
+              <div className="toggle-switch" key={type}>
+                <span>
+                  {type === 'email' && <span role="img" aria-label="Email">📧</span>}
+                  {type === 'sms' && <span role="img" aria-label="SMS">📱</span>}
+                  {type === 'push' && <span role="img" aria-label="Push">🔔</span>}
+                  <span style={{ marginLeft: '.43em' }}>{type.toUpperCase()}</span>
+                </span>
+                <span
+                  className={`toggle-slider${reminders[type] ? ' checked' : ''}`}
+                  onClick={() => handleRemindersToggle(type)}
+                >
+                  <span
+                    className="toggle-dot"
+                    style={{ left: reminders[type] ? '17.5px' : '2px' }}
+                  />
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Section: Upload Appointment Document */}
+        <div className="doc-upload-wrap">
+          <div className="section-title" style={{ color:"#E87A41", marginTop:0, marginBottom:".8em", fontSize:"1.32rem" }}>
+            Appointment Documents
+          </div>
+          <input
+            type="file"
+            style={{ marginBottom: "1rem" }}
+            accept="image/*,.pdf,.docx"
+            onChange={handleUploadChange}
+            ref={uploadInputRef}
+          />
+          {uploadFile && (
+            <div className="doc-upload-preview">
+              <span>{uploadFile.name}</span>
+              {uploadPreview && (
+                // Show preview if it's an image
+                <img src={uploadPreview} alt="Preview" className="doc-preview-img" />
+              )}
+              {!uploadPreview &&
+                <span style={{
+                  color: "#656461",
+                  fontStyle: "italic"
+                }}>
+                  (Preview unavailable)
+                </span>}
+              <button
+                onClick={() => {
+                  setUploadFile(null);
+                  setUploadPreview(null);
+                  uploadInputRef.current.value = "";
+                }}
+                style={{
+                  marginLeft: "1.5em",
+                  border: "none",
+                  background: "#e87a41bb",
+                  color: "#fff",
+                  borderRadius: "6px",
+                  padding: "0.25em 0.8em",
+                  cursor: "pointer",
+                  fontWeight: 600
+                }}
+              >Remove</button>
+            </div>
+          )}
+        </div>
+
+        {/* Section: Appointment History */}
+        <div>
+          <div className="section-title">Appointment History</div>
+          <div className="appt-type-filter" style={{ marginBottom: "-0.3em" }}>
+            {appointmentTypes.map(at =>
+              <button
+                key={at.value}
+                className={`appt-type-btn${filterType === at.value ? " active" : ""}`}
+                onClick={() => setFilterType(at.value)}
+              >
+                <span style={{ marginRight: ".35rem", fontSize: '1.2rem' }}>{at.icon}</span> {at.label}
+              </button>
+            )}
+          </div>
+          <div style={{ overflowX: "auto" }}>
+            <table className="app-history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Pet</th>
+                  <th>Type</th>
+                  <th>Notes</th>
+                  <th>Rebook</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredHistory.length === 0 &&
+                  <tr><td colSpan="6" style={{ color: "#e87a41", textAlign: "center", fontWeight: "bold" }}>No history for this type.</td></tr>
+                }
+                {filteredHistory.map(h => (
+                  <tr key={h.id}>
+                    <td>{h.date}</td>
+                    <td>{h.time}</td>
+                    <td>{h.pet}</td>
+                    <td>
+                      <span>{h.icon} {h.type}</span>
+                    </td>
+                    <td>{h.notes}</td>
+                    <td>
+                      <button className="rebook-btn" onClick={() => setShowForm(true)}>
+                        <span role="img" aria-label="Book Again">🔁</span> Rebook
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Modal for New Appointment */}
+        {showForm && (
+          <div className="modal-overlay" onClick={() => setShowForm(false)}>
+            <div
+              className="modal-content"
+              onClick={e => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+            >
+              <span className="modal-close" onClick={() => setShowForm(false)}>&times;</span>
+              <div style={{ fontSize: "1.27rem", fontWeight: 700, marginBottom: "0.7em", color: "#E87A41" }}>
+                Add New Appointment
+              </div>
+              <form className="new-appt-form" autoComplete="off" onSubmit={handleFormSubmit}>
+                <label>
+                  Pet Name
+                  <input name="pet" type="text" required placeholder="Enter pet name" />
+                </label>
+                <label>
+                  Type
+                  <select name="type" required>
+                    <option value="Vet Check-Up">Vet Check-Up</option>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Vaccine">Vaccine</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </label>
+                <label>
+                  Date
+                  <input name="date" type="date" required />
+                </label>
+                <label>
+                  Time
+                  <input name="time" type="time" required />
+                </label>
+                <label>
+                  Notes
+                  <textarea name="notes" placeholder="Add notes (optional)" rows={2} />
+                </label>
+                <button style={gradientBtnStyle} className="animated-btn" type="submit">
+                  <span style={{ fontWeight: 700 }}>Create Appointment</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+
+      </div>
     </div>
   );
 }
-
-/** Toggle UI for Reminders/Notifications */
-function ToggleSwitch({ checked, onChange }) {
-  return (
-    <label style={{ display: "inline-block", width: 44, height: 26, position: "relative" }}>
-      <input type="checkbox" checked={checked} onChange={onChange}
-        style={{ opacity: 0, width: 0, height: 0 }} />
-      <span style={{
-        position: "absolute", cursor: "pointer", top: 0, left: 0, right: 0, bottom: 0,
-        background: checked ? "var(--kavia-orange)" : "#d0d0d0",
-        transition: ".3s", borderRadius: 20
-      }} />
-      <span style={{
-        position: "absolute", left: checked ? 24 : 4, top: 4,
-        width: 18, height: 18, background: "#fff", borderRadius: "50%", boxShadow: "0 1px 2px #0001",
-        transition: ".38s"
-      }} />
-    </label>
-  );
-}
-
-/** Preview doc uploads (pdf/image) */
-function DocPreview({ doc }) {
-  const icon = doc.type === "pdf"
-    ? <span role="img" aria-label="pdf" style={{ fontSize: 28 }}>📄</span>
-    : doc.type === "image"
-      ? <span role="img" aria-label="img" style={{ fontSize: 28 }}>🖼️</span>
-      : <span role="img" aria-label="file" style={{ fontSize: 28 }}>📎</span>;
-  return (
-    <div style={{
-      minWidth: 100, minHeight: 60, background: "#faf9f6", borderRadius: 8,
-      padding: "12px 16px", display: "flex", alignItems: "center", gap: 14,
-      boxShadow: "0 1px 8px #88643418"
-    }}>
-      {icon}
-      <span style={{ wordBreak: "break-all", fontSize: 14 }}>{doc.name}</span>
-    </div>
-  );
-}
-
-/* -- Table cell style helpers -- */
-const th = { fontWeight: 600, padding: "8px 8px", fontSize: 15, textAlign: "left", color: "#444" };
-const td = { fontWeight: 400, padding: "8px 8px", fontSize: 15, color: "#222" };
-const inputStyle = { border: "1px solid #ccc", borderRadius: 6, fontSize: 15, padding: "6px 8px", marginLeft: 6, width: 180 };
 
 export default ManageAppointmentsPage;
