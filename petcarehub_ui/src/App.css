@@ -54,7 +54,9 @@
 
 /* Existing hover/active styling preserved for backgrounds, not color */
 .btn:hover, button:hover, input[type="submit"]:hover, .btn-glass:hover {
-  background: linear-gradient(106deg, var(--accent) 59%, var(--primary) 98%);
+  /* Restore hover to be vibrant orange accent with transition */
+  background: linear-gradient(104deg, var(--kavia-orange) 54%, var(--accent) 98%);
+  color: #000 !important;
   transform: translateY(-2px) scale(1.033);
   filter: brightness(1.1) saturate(1.08);
   box-shadow: 0 8px 27px 0 rgba(174,187,115,0.21);
