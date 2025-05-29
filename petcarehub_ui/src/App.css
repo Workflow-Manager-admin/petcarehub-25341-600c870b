@@ -62,7 +62,10 @@
   box-shadow: 0 8px 27px 0 rgba(174,187,115,0.21);
   transition: var(--transition-btn);
 }
-.btn:active, button:active, .btn-glass:active {
+.btn:active, button:active, input[type="submit"]:active, .btn-glass:active, 
+.btn:focus, button:focus, input[type="submit"]:focus, .btn-glass:focus {
+  background: linear-gradient(104deg, var(--kavia-orange) 54%, var(--accent) 98%);
+  color: #000 !important;
   transform: scale(0.97);
 }
 
