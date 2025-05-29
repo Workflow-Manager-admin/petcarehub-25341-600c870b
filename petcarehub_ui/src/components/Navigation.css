@@ -165,6 +165,7 @@ li.pch-navbar-dropdown.open > .pch-navbar-link {
 /* NESTED DROPDOWN (support for Settings > Support/Account levels) */
 .pch-navbar-dropdown-level1 {
   position: relative;
+  /* NOTE: To make the sub-navigation appear LEFT, see menu styles below. */
 }
 
 .pch-navbar-dropdown-level1 > .pch-dropdown-menu {
