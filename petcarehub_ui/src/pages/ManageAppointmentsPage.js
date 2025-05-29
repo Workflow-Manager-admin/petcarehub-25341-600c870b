@@ -71,7 +71,16 @@ function ManageAppointmentsPage() {
                 </div>
                 <div className={styles.timeText}>{item.time}</div>
               </div>
+              {/* Details button (left as is), and new Manage button with green gradient */}
               <button className={styles.gradientButton}>Details</button>
+              <button
+                className={styles.manageGradientBtn}
+                type="button"
+                aria-label={`Manage appointment for ${item.pet}`}
+                tabIndex={0}
+              >
+                Manage
+              </button>
             </li>
           ))}
         </ul>
