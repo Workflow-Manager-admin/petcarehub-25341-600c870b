@@ -14,6 +14,7 @@ import AboutPrivacy from './pages/AboutPrivacy';
 import Login from './pages/Auth/Login';
 import Signup from './pages/Auth/Signup';
 import LandingPage from './pages/LandingPage';
+import Dashboard from './pages/Dashboard';
 
 /**
  * PUBLIC_INTERFACE
