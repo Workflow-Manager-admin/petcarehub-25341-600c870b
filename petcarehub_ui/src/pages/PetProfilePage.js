@@ -39,12 +39,49 @@ function PetProfilePage() {
     attachments: []
   });
   const [editingField, setEditingField] = useState(null);
+  const [isBasicInfoEdit, setIsBasicInfoEdit] = useState(false);
+  const [basicInfoDraft, setBasicInfoDraft] = useState({});
   const [noteDraft, setNoteDraft] = useState(pet.notes);
   const [ownerOpen, setOwnerOpen] = useState(false);
   const [newVaccine, setNewVaccine] = useState({ name: "", date: "", status: "valid" });
   const [vacExpanded, setVacExpanded] = useState(false);
   const [uploadFiles, setUploadFiles] = useState([]);
   const fileInputRef = useRef();
+
+  // ---- BASIC INFO EDIT HANDLERS ----
+  function handleBasicInfoBeginEdit() {
+    setBasicInfoDraft({
+      breed: pet.breed,
+      dob: pet.dob,
+      color: pet.color,
+      age: pet.age,
+      microchip: pet.microchip,
+      weight: pet.weight,
+    });
+    setIsBasicInfoEdit(true);
+  }
+
+  function handleBasicInfoChange(field, value) {
+    setBasicInfoDraft(prev => ({ ...prev, [field]: value }));
+  }
+
+  function handleBasicInfoSave() {
+    setPet(prev => ({
+      ...prev,
+      breed: basicInfoDraft.breed,
+      dob: basicInfoDraft.dob,
+      color: basicInfoDraft.color,
+      age: basicInfoDraft.age,
+      microchip: basicInfoDraft.microchip,
+      weight: basicInfoDraft.weight,
+    }));
+    setIsBasicInfoEdit(false);
+  }
+
+  function handleBasicInfoCancel() {
+    setIsBasicInfoEdit(false);
+    setBasicInfoDraft({});
+  }
 
   // ---- PET IMAGE/AVATAR LOGIC ----
   function handlePhotoChange(e) {
